@@ -5,6 +5,7 @@
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -24,13 +25,13 @@ code {
 }
 
 .section2size {
-  margin-top: 100px;
+  margin-top: 110px;
   margin-left: 125px;
   width: 535px;
 }
 
 .section3size {
-  margin-top: 45px;
+  margin-top: 65px;
   margin-left: 125px;
   width: 535px;
 }
@@ -48,10 +49,26 @@ code {
   text-align: center;
 }
 
-.wavybot svg {
+.wavybot1 svg {
   display: inline-block;
   position: relative;
   top: 0;
   left: 0;
   fill: rgb(224 242 254);
 }
+
+.wavybot2 svg {
+  position: relative;
+  top: 0;
+  left: 0;
+  fill: white;
+  border: none;
+  background-color: rgb(130, 130, 130);
+}
+
+
+.practice-section {
+  background-color: rgb(130, 130, 130);
+  height: 65vh;
+}
+
