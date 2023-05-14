@@ -1,6 +1,8 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import section1 from '../images/section1.png';
+import section2 from '../images/section2.png';
+import section3 from '../images/section3.png';
 
 function Landing() {
     return (
@@ -9,7 +11,7 @@ function Landing() {
             <div>
                 <section className='flex flex-row justify-evenly bg-sky-100'>
                     <div className='flex flex-col section1size mr-12'>
-                        <h1 className='text-5xl mb-10 font-bold'>Get Connected, Quicker</h1>
+                        <h1 className='text-5xl mb-10 font-bold text-center'>Get Connected, Quicker</h1>
                         <p className='mb-10'>devDirect is the leading application designed to get students into the industry quicker by connecting them with employers.</p>
                         <p className='mb-2'> For students, gain passive attention from potential employers</p>
                         <p className='mb-10'>For employers, it's never been easier to find quality developing minds.</p>
@@ -23,11 +25,51 @@ function Landing() {
                         <img src={section1} alt="devDirect" />
                     </div>
                 </section>
+
                 <div class="wavybot">
-                    <svg viewBox="0 0 500 47" preserveAspectRatio="xMinYMin meet">
+                    <svg viewBox="0 0 500 60" preserveAspectRatio="xMinYMin meet">
                         <path class="change-my-color" d="M0,30 C150,80 350,0 500,30 L500,00 L0,0 Z"></path>
                     </svg>
                 </div>
+
+                <section class='flex flex-row justify-evenly'>
+                    <div class='m-10'>
+                        <img src={section2} alt="devDirect" />
+                    </div>
+                    <div className='flex flex-col section2size mr-12'>
+                        <h1 className='text-5xl mb-7 font-bold text-center'>Students</h1>
+                        <span class='text-xl mb-5 text-center'>Work Smarter, Not Harder</span>
+                        <p class='mb-10 text-center'>Create a profile and showcase the many ways you stand out from the rest!</p>
+                        <div class='grid grid-cols-2 text-center'>
+                            <span class='m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg'>Portfolio</span>
+                            <span class='m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg'>Resume</span>
+                            <span class='m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg'>Recommendations</span>
+                            <span class='m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg'>Course Grades</span>
+                            <span class='m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg'>Skills</span>
+                            <span class='m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg'>Languages</span>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="breakline"/>
+
+
+                <section class='flex flex-row justify-evenly'>
+                    <div class='m-10'>
+                        <img src={section3} alt="devDirect" />
+                    </div>
+                    <div className='flex flex-col section3size mr-12'>
+                        <h1 className='text-5xl mb-7 font-bold text-center'>Employers</h1>
+                        <span class='text-xl mb-5 text-center'>Quality Over Quantity</span>
+                        <p class='mb-10 text-center'>Stop sifting through hundreds of applications, where only half the applicants are qualified. Instead, use devDirect to find valuable, and eager career-minded individuals quickly. With our strong targeted sorting, it's never been easier!</p>
+                        <div class='grid grid-cols-2 text-center'>
+                            <span class='m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg'>Recently Graduated</span>
+                            <span class='m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg'>Grade Point Average</span>
+                            <span class='m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg'>Specific Languages</span>
+                            <span class='m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg'>So Much More</span>
+                        </div>
+                    </div>
+                </section>
             </div>
             <Footer />
         </main>

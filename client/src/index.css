@@ -23,6 +23,31 @@ code {
   width: 535px;
 }
 
+.section2size {
+  margin-top: 100px;
+  margin-left: 125px;
+  width: 535px;
+}
+
+.section3size {
+  margin-top: 45px;
+  margin-left: 125px;
+  width: 535px;
+}
+
+.breakline {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 40px;
+  width: 60%;
+  display: flex;
+  border: 2px solid #e2e8f0;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  text-align: center;
+}
+
 .wavybot svg {
   display: inline-block;
   position: relative;
