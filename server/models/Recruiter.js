@@ -8,8 +8,8 @@ function validateEmail () {
     return emailRegex.test(this.email);
 }
 
-//creating user schema
-const userSchema = new Schema({
+//creating recruiter schema
+const recruiterSchema = new Schema({
     username: {
       type: String,
       required: true,
@@ -37,9 +37,19 @@ const userSchema = new Schema({
         require: true,
         trim: true
     },
+    buisness_name: {
+        type: String,
+        require: true,
+        trim: false,
+    },
+    buisness_address: {
+        type: String,
+        require: true,
+        trim: false,
+    },
   });
 
-//removing the users password from the response
+  //removing the users password from the response
 userSchema.methods.toJSON = function () {
     const user = this.toObject();
     delete user.password;
@@ -65,8 +75,8 @@ userSchema.methods.validatePass = async function (form_password) {
     return is_valid;
 };
 
-//creating the MODEL 
-const User = model('user', userSchema);
+//creating recruiter MODEL 
+const Recruiter = model('recruiter', recruiterSchema);
 
-//exporting the MODEL
-module.exports = User;
+//exporting recruiter MODEL
+module.exports = Recruiter;
