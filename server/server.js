@@ -22,6 +22,11 @@ app.use(express.static('../client/build'));
 app.use('/api', api_routes);
 app.use('/auth', auth_routes);
 
+//trusting the proxy
+if (in_production) {
+    app.enable('trust proxy');
+}
+
 //creating session!
 app.use(session({
     secret: process.env.SESSION_SECRET,
