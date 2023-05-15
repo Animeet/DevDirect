@@ -27,6 +27,16 @@ const userSchema = new Schema({
       required: true,
       min: 6
     },
+    first_name: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    last_name: {
+        type: String,
+        require: true,
+        trim: true
+    },
   });
 
 //removing the users password from the response
