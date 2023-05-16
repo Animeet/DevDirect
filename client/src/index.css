@@ -13,9 +13,75 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.registerbody {
+  background: linear-gradient(-45deg, #003e85, #e6feff, #71eeff, #00328f);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.mytabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 750px;
+  padding: 25px;
+}
+
+.mytabs input[type='radio'] {
+  display: none;
+}
+
+.tab-label-1 {
+  cursor: pointer;
+  background-color: white;
+  z-index: 1;
+  font-size: 1.3rem;
+  padding: 20px 50px;
+  border-bottom: none;
+  border-top-left-radius: 20px;
+}
+
+.tab-label-2 {
+  cursor: pointer;
+  background-color: white;
+  font-size: 1.3rem;
+  z-index: 1;
+  padding: 20px 50px;
+  border-bottom: none;
+  border-left: 1px solid rgba(146, 146, 146, 0.247);
+  border-top-right-radius: 20px;
+}
+
+.mytabs .tab {
+  order: 1;
+  display: none;
+}
+
+.mytabs input[type='radio']:checked + label + .tab {
+  display: block;
+}
+
+.formsize {
+  border-radius: 25px;
+  width: 750px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .section1size {
@@ -70,5 +136,11 @@ code {
 .practice-section {
   background-color: rgb(130, 130, 130);
   height: 65vh;
+}
+
+.textbox {
+  text-align: center;
+  height: auto;
+  width: 75%;
 }
 
