@@ -10,6 +10,13 @@ function validateEmail () {
 
 //creating user schema
 const userSchema = new Schema({
+    username: {
+        type: String,
+        required: false,
+        unique: true,
+        trim: true,
+        min: 6
+    },
     email: {
       type: String,
       required: true,

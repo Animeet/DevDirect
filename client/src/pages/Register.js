@@ -1,240 +1,171 @@
+// import { redirect } from 'react-router-dom'
+// import { useState } from 'react';
+// import axios from 'axios';
+
+// import Header from '../components/Header';
+// import Footer from '../components/Footer';
+
+// function UserRegister(props) {
+
+//     const [registerType, setRegisterType] = useState('student');
+//     const [errorMessage, setErrorMessage] = useState('');
+//     const [studentFormData, setStudentFormData] = useState ({
+//         email: "",
+//         password: "",
+//         first_name: "",
+//         last_name: "",
+//     })
+
+
+//     const handleInputChange = (e) => {
+//         const prop = e.target.name;
+//         if (registerType === 'student') {
+//             setStudentFormData({
+//                 ...studentFormData,
+//                 [prop]: e.target.value
+//             })
+//         }
+//       };
+
+//       const handleSubmit = async (e) => {
+//         e.preventDefault();
+        
+//         try {
+//           const res = await axios.post('/auth/register', studentFormData);
+          
+//           props.setUser(res.data.user);
+//           setErrorMessage('');
+//         } catch (err) {
+//           const message = err.response.data.error;
+    
+//           setErrorMessage(message);
+//         }
+//       }
+
+//       return (
+//     <form onSubmit={handleSubmit}>
+//         <h1>Register</h1>
+
+//         {errorMessage && <p className="error">{errorMessage}</p>}
+
+//         <input
+//         name="first_name"
+//         onChange={handleInputChange}
+//         value={studentFormData.first_name}
+//         type="text"
+//         placeholder="Enter your first name" />
+//         <input
+//         name="last_name"
+//         onChange={handleInputChange}
+//         value={studentFormData.last_name}
+//         type="text"
+//         placeholder="Enter your last name" />
+//         <input
+//         name="email"
+//         onChange={handleInputChange}
+//         value={studentFormData.email}
+//         type="email"
+//         placeholder="Enter your desired email address" />
+//         <input
+//         name="password"
+//         onChange={handleInputChange}
+//         value={studentFormData.password}
+//         type="password"
+//         placeholder="Enter your desired password" />
+//         <button>Submit</button>
+//     </form>
+//   );
+// }
+
+// export default UserRegister;
+
+// const handleSubmit = async (e) => {
+//   e.preventDefault();
+
+//   try {
+//     const url = `/auth/register?type=${registerType === 'student' ? 'student':'recruiter'}`
+//     const res = await axios.post(url, registerType === 'student');
+      
+//     props.setUser(res.data.user);
+//     setErrorMessage('');
+//     redirect('/dashboard');
+//   } catch (err) {
+//     const message = err.response.data.error;
+
+//     setErrorMessage(message);
+//   }
+// }
 
 import { useState } from 'react';
 import axios from 'axios';
 
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+function Register(props) {
+  const [formData, setFormData] = useState({
+    first_name: '',
+    last_name: '',
+    email: '',
+    password: ''
+  });
+  const [errorMessage, setErrorMessage] = useState('');
 
-function Register() {
+  const handleInputChange = (e) => {
+    const prop = e.target.name;
+
+    setFormData({
+      ...formData,
+      [prop]: e.target.value
+    })
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await axios.post('/auth/register', formData);
+
+      props.setUser(res.data.user);
+      setErrorMessage('');
+    } catch (err) {
+      const message = err.response.data.error;
+
+      setErrorMessage(message);
+    }
+  }
+
   return (
-    <div>
-      <Header />
+    <form className='register-form' onSubmit={handleSubmit}>
+      <h1>Register</h1>
 
-      <section className="flex justify-center p-8 registerbody">
-        <div className="mytabs">
-          <input type="radio" id="tabuser" name="mytabs" checked="checked" />
-          <label class="tab-label-1" for="tabuser">
-            Student
-          </label>
-          <div class=" mb-14 p-6 space-y-4 md:space-y-6 sm:p-8 formsize bg-white tab">
-            <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
-              Create A User Account
-            </h1>
-            <form class="space-y-4 md:space-y-6" action="#">
-              <div>
-                <label
-                  for="email"
-                  class="block mb-2 text-sm font-medium text-gray-900"
-                >
-                  Your email
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                  placeholder="name@company.com"
-                  required=""
-                />
-              </div>
-              <div>
-                <label
-                  for="firstname"
-                  class="block mb-2 text-sm font-medium text-gray-900"
-                >
-                  First Name
-                </label>
-                <input
-                  type="text"
-                  name="first"
-                  id="first"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                  placeholder="First Name"
-                  required=""
-                />
-              </div>
-              <div>
-                <label
-                  for="lastname"
-                  class="block mb-2 text-sm font-medium text-gray-900"
-                >
-                  Last Name
-                </label>
-                <input
-                  type="text"
-                  name="last"
-                  id="last"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                  placeholder="Last Name"
-                  required=""
-                />
-              </div>
-              <div>
-                <label
-                  for="password"
-                  class="block mb-2 text-sm font-medium text-gray-900"
-                >
-                  Password
-                </label>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="••••••••"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                  required=""
-                />
-              </div>
-              <button
-                type="submit"
-                class="w-full text-white bg-sky-400 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-              >
-                Create an account
-              </button>
-              <p class="text-sm font-light text-gray-500">
-                Already have an account?{" "}
-                <a
-                  href="#"
-                  class="font-medium text-primary-600 hover:underline"
-                >
-                  Login here
-                </a>
-              </p>
-            </form>
-          </div>
-          <input
-            type="radio"
-            id="tabemployer"
-            name="mytabs"
-            checked="checked"
-          />
-          <label class="tab-label-2" for="tabemployer">
-            Employer
-          </label>
-          <div class=" mb-14 p-6 space-y-4 md:space-y-6 sm:p-8 formsize bg-white tab">
-            <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
-              Create An Employer Account
-            </h1>
-            <form class="space-y-4 md:space-y-6" action="#">
-              <div>
-                <label
-                  for="email"
-                  class="block mb-2 text-sm font-medium text-gray-900"
-                >
-                  Your email
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                  placeholder="name@company.com"
-                  required=""
-                />
-              </div>
-              <div>
-                <label
-                  for="firstname"
-                  class="block mb-2 text-sm font-medium text-gray-900"
-                >
-                  First Name
-                </label>
-                <input
-                  type="text"
-                  name="first"
-                  id="first"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                  placeholder="First Name"
-                  required=""
-                />
-              </div>
-              <div>
-                <label
-                  for="lastname"
-                  class="block mb-2 text-sm font-medium text-gray-900"
-                >
-                  Last Name
-                </label>
-                <input
-                  type="text"
-                  name="last"
-                  id="last"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                  placeholder="Last Name"
-                  required=""
-                />
-              </div>
-              <div>
-                <label
-                  for="firstname"
-                  class="block mb-2 text-sm font-medium text-gray-900"
-                >
-                  Business Name
-                </label>
-                <input
-                  type="text"
-                  name="first"
-                  id="first"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                  placeholder="Business Name"
-                  required=""
-                />
-              </div>
-              <div>
-                <label
-                  for="lastname"
-                  class="block mb-2 text-sm font-medium text-gray-900"
-                >
-                  Business Address
-                </label>
-                <input
-                  type="text"
-                  name="last"
-                  id="last"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                  placeholder="Business Address"
-                  required=""
-                />
-              </div>
-              <div>
-                <label
-                  for="password"
-                  class="block mb-2 text-sm font-medium text-gray-900"
-                >
-                  Password
-                </label>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="••••••••"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                  required=""
-                />
-              </div>
-              <button
-                type="submit"
-                class="w-full text-white bg-sky-400 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-              >
-                Create an account
-              </button>
-              <p class="text-sm font-light text-gray-500">
-                Already have an account?{" "}
-                <a
-                  href="#"
-                  class="font-medium text-primary-600 hover:underline"
-                >
-                  Login here
-                </a>
-              </p>
-            </form>
-          </div>
-        </div>
-      </section>
+      {errorMessage && <p className="error">{errorMessage}</p>}
 
-      <Footer />
-    </div>
-  );
+      <input
+        name="first_name"
+        onChange={handleInputChange}
+        value={formData.first_name}
+        type="text"
+        placeholder="Enter your First Name" />
+        <input
+        name="last_name"
+        onChange={handleInputChange}
+        value={formData.last_name}
+        type="text"
+        placeholder="Enter your Last Name" />
+      <input
+        name="email"
+        onChange={handleInputChange}
+        value={formData.email}
+        type="email"
+        placeholder="Enter your desired email address" />
+      <input
+        name="password"
+        onChange={handleInputChange}
+        value={formData.password}
+        type="password"
+        placeholder="Enter your desired password" />
+      <button>Submit</button>
+    </form>
+  )
 }
 
 export default Register;
+

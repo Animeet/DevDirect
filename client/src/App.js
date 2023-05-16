@@ -10,30 +10,30 @@ import Login from './pages/Login.js';
 import Register from './pages/Register.js';
 
 //importing components
-import Header from './components/Header.js';
-import Footer from './components/Footer.js';
+// import Header from './components/Header.js';
+// import Footer from './components/Footer.js';
 
 function App() {
 
   //setting state
   const [user, setUser] = useState(null);
 
-  //function to check if user is logged in
-  // useEffect(() => {
-  //   axios.get('/auth/authenticated', { withCredentials: true })
-  //     .then(res => {
-  //       setUser(res.data.user);
-  //     })
-  // }, []);
+  // function to check if user is logged in
+  useEffect(() => {
+    axios.get('/auth/authenticated')
+      .then(res => {
+        setUser(res.data.user);
+      })
+  }, []);
 
   return (
     <>
     <Routes>
-      <Route path="/" element={<Landing user={user} setUser={setUser} />} />
-      <Route path="/login" element={<Login user={user} setUser={setUser} />} />
-      <Route path="/register" element={<Register user={user} setUser={setUser} />} />
-      <Route path="/dashboard" element={<Dashboard user={user} setUser={setUser} />} />
-    </Routes>
+        <Route path="/" element={<Landing user={user} setUser={setUser} />} />
+        <Route path="/dashboard" element={user ? <Dashboard setUser={setUser} user={user} /> : <Navigate to="/login" />} />
+        <Route path="/login" element={!user ? <Login setUser={setUser} /> : <Navigate to="/dashboard" />} />
+        <Route path="/register" element={!user ? <Register setUser={setUser} /> : <Navigate to="/dashboard" />} />
+      </Routes>
     </>
   )
 }
