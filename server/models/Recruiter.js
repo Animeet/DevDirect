@@ -10,12 +10,6 @@ function validateEmail () {
 
 //creating recruiter schema
 const recruiterSchema = new Schema({
-    title: {
-      type: String,
-      required: true,
-      unique: true,
-      trim: true
-    },
     email: {
       type: String,
       required: true,
@@ -37,12 +31,12 @@ const recruiterSchema = new Schema({
         require: true,
         trim: true
     },
-    buisness_name: {
+    business_name: {
         type: String,
         require: true,
         trim: false,
     },
-    buisness_address: {
+    business_address: {
         type: String,
         require: true,
         trim: false,
