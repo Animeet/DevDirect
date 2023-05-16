@@ -16,9 +16,9 @@ function Landing() {
                         <h1 className='text-5xl mb-10 font-bold text-center'>Get Connected, Quicker</h1>
                         <p className='mb-10'>devDirect is the leading application designed to get students into the industry quicker by connecting them with employers.</p>
                         <p className='mb-2'> For students, gain passive attention from potential employers</p>
-                        <p className='mb-10'>For employers, it's never been easier to find quality developing minds.</p>
-                        <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
-                            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 rounded-md group-hover:bg-opacity-0">
+                        <p className='mb-10'>For employers, it's never been easier to find quality developing minds!</p>
+                        <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white  focus:ring-4 focus:outline-none focus:ring-cyan-200">
+                            <span class="relative px-5 text-white py-2.5 transition-all ease-in duration-75 rounded-md group-hover:bg-opacity-0">
                                 Sign Up Today
                             </span>
                         </button>
@@ -112,22 +112,22 @@ function Landing() {
 
                 <section class="bg-white" id='contact'>
                     <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-                        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
-                        <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Are you an employer looking to create a recruit account? Want to help us improve by offering suggestions? Whatever your question, let us know!</p>
+                        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900">Contact Us</h2>
+                        <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 sm:text-xl">Are you an employer looking to create a recruit account? Want to help us improve by offering suggestions? Whatever your question, let us know!</p>
                         <form action="#" class="space-y-8">
                             <div>
-                                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
-                                <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Type in your email address" required />
+                                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
+                                <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5" placeholder="Type in your email address" required />
                             </div>
                             <div>
-                                <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
-                                <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Let us know how we can help you" required />
+                                <label for="subject" class="block mb-2 text-sm font-medium text-gray-900">Subject</label>
+                                <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 " placeholder="Let us know how we can help you" required />
                             </div>
                             <div class="sm:col-span-2">
-                                <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
-                                <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..."></textarea>
+                                <label for="message" class="block mb-2 text-sm font-medium text-gray-900">Your message</label>
+                                <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500" placeholder="Leave a comment..."></textarea>
                             </div>
-                            <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-sky-400 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send message</button>
+                            <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-sky-400 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 ">Send message</button>
                         </form>
                     </div>
                 </section>
