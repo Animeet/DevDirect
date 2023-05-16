@@ -10,7 +10,7 @@ function validateEmail () {
 
 //creating recruiter schema
 const recruiterSchema = new Schema({
-    username: {
+    title: {
       type: String,
       required: true,
       unique: true,
