@@ -15,7 +15,7 @@ function Landing() {
                     <div className='flex flex-col section1size mr-12'>
                         <h1 className='text-5xl mb-10 font-bold text-center'>Get Connected, Quicker</h1>
                         <p className='mb-10'>devDirect is the leading application designed to get students into the industry quicker by connecting them with employers.</p>
-                        <p className='mb-2'> For students, gain passive attention from potential employers</p>
+                        <p className='mb-2'> For students, gain passive attention from potential employers!</p>
                         <p className='mb-10'>For employers, it's never been easier to find quality developing minds!</p>
                         <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white  focus:ring-4 focus:outline-none focus:ring-cyan-200">
                             <span class="relative px-5 text-white py-2.5 transition-all ease-in duration-75 rounded-md group-hover:bg-opacity-0">
