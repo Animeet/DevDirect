@@ -36,6 +36,10 @@ code {
     monospace;
 }
 
+.loginform {
+  height: 700px;
+}
+
 .mytabs {
   display: flex;
   flex-wrap: wrap;
@@ -81,6 +85,14 @@ code {
 .formsize {
   border-radius: 25px;
   width: 750px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.loginsize {
+  margin-top: 100px;
+  border-radius: 25px;
+  width: 750px;
+  height: 400px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
