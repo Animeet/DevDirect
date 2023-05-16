@@ -1,7 +1,7 @@
 
 function Dashboard (props) {
     return (
-        <h1>Hello {props.type === 'student' ? 'Student':'Employer'}</h1>
+        <h1>Hello</h1>
     )
 }
 

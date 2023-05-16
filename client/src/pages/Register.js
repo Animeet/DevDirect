@@ -96,44 +96,44 @@
 //   }
 // }
 
-import { useState } from "react";
-import axios from "axios";
+import { useState } from 'react';
+import axios from 'axios';
 
 function Register(props) {
   const [formData, setFormData] = useState({
-    first_name: "",
-    last_name: "",
-    email: "",
-    password: "",
+    first_name: '',
+    last_name: '',
+    email: '',
+    password: ''
   });
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleInputChange = (e) => {
     const prop = e.target.name;
 
     setFormData({
       ...formData,
-      [prop]: e.target.value,
-    });
+      [prop]: e.target.value
+    })
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("/auth/register", formData);
+      const res = await axios.post('/auth/register', formData);
 
       props.setUser(res.data.user);
-      setErrorMessage("");
+      setErrorMessage('');
     } catch (err) {
       const message = err.response.data.error;
 
       setErrorMessage(message);
     }
-  };
+  }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='register-form' onSubmit={handleSubmit}>
       <h1>Register</h1>
 
       {errorMessage && <p className="error">{errorMessage}</p>}
@@ -143,32 +143,28 @@ function Register(props) {
         onChange={handleInputChange}
         value={formData.first_name}
         type="text"
-        placeholder="Enter your First Name"
-      />
-      <input
+        placeholder="Enter your First Name" />
+        <input
         name="last_name"
         onChange={handleInputChange}
         value={formData.last_name}
         type="text"
-        placeholder="Enter your Last Name"
-      />
+        placeholder="Enter your Last Name" />
       <input
         name="email"
         onChange={handleInputChange}
         value={formData.email}
         type="email"
-        placeholder="Enter your desired email address"
-      />
+        placeholder="Enter your desired email address" />
       <input
         name="password"
         onChange={handleInputChange}
         value={formData.password}
         type="password"
-        placeholder="Enter your desired password"
-      />
+        placeholder="Enter your desired password" />
       <button>Submit</button>
     </form>
-  );
+  )
 }
 
 export default Register;

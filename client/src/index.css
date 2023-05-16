@@ -156,3 +156,13 @@ code {
   width: 75%;
 }
 
+.register-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-form input {
+  width: 50%;
+}
