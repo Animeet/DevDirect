@@ -14,13 +14,16 @@ const app = express();
 
 //pulling in routes
 const api_routes = require('./routes/api-routes');
-const auth_routes = require('./routes/auth_routes');
+const user_auth_routes = require('./routes/user-auth-routes');
+const recruiter_auth_routes = require('./routes/recruiter-auth-routes.js');
 
 //middleware functions
 app.use(express.json());
 app.use(express.static('../client/build'));
 app.use('/api', api_routes);
-app.use('/auth', auth_routes);
+app.use('/userauth', user_auth_routes);
+app.use('/recauth', recruiter_auth_routes);
+
 
 //trusting the proxy
 if (in_production) {
