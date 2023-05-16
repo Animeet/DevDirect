@@ -20,7 +20,7 @@ const recruiter_auth_routes = require('./routes/recruiter-auth-routes.js');
 //middleware functions
 app.use(express.json());
 app.use(express.static('../client/build'));
-app.use('/api', api_routes);
+// app.use('/api', api_routes);
 app.use('/userauth', user_auth_routes);
 app.use('/recauth', recruiter_auth_routes);
 
