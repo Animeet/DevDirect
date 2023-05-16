@@ -50,13 +50,6 @@ router.get('/authenticated', async (req, res) => {
   const user_id = req.session.user_id;
 
   if (!user_id) return res.send({ user: null });
-
-  const user = await User.findById(user_id).populate({
-    path: 'favorites',
-    populate: 'user'
-  });
-
-  res.send({ user: user });
 });
 
 
