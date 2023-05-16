@@ -5,8 +5,20 @@ import section2 from '../images/section2.png';
 import section3 from '../images/section3.png';
 import technical from '../images/technical.png';
 import behavioral from '../images/behavioral.png';
+import $ from 'jquery';
 
 function Landing() {
+
+    $(document).on("click","a",function(e){
+        e.preventDefault();
+        var id = $(this).attr("href"),
+            topSpace = 30;
+        $('html, body').animate({
+            scrollTop: $(id).offset().top - topSpace
+        }, 400);
+    });
+
+
     return (
         <main>
             <Header />
