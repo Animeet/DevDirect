@@ -1,11 +1,7 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-
 
 function Dashboard(props) {
     return (
         <div>
-
             <section className="registerbody dashform">
                 <div className="dashsize flex flex-col m-6">
                     <h1 className="text-center p-10 font-bold text-5xl tracking-wider">Student Dashboard</h1>
