@@ -38,7 +38,7 @@ function Prospect() {
                     <hr />
                     <div class="flex flex-row justify-center pt-2">
                       <p class="text-center font-medium">
-                        Rutger's Full-Stack Bootcamp
+                      {portfolio?.user?.university}
                       </p>
                     </div>
                   </div>
