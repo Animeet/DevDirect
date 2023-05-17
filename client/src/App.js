@@ -22,7 +22,7 @@ function App() {
 
   // function to check if user is logged in
   useEffect(() => {
-    axios.get('/auth/authenticated')
+    axios.get('/auth/authenticated', { withCredentials: true })
       .then(res => {
         console.log(res.data.user)
         setUser(res.data.user);
