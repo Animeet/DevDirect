@@ -72,6 +72,7 @@ function Profile() {
             <h3 class="text-center text-4xl p-8">Programming Languages</h3>
             <div class="flex flex-row justify-evenly pb-8">
               <h5 class="text-xl">{portfolio?.user?.languages[0]}</h5>
+              {/* is targeting index 0 correct? */}
               {/* <h5 class="text-xl">Python</h5>
               <h5 class="text-xl">Java</h5> */}
             </div>
