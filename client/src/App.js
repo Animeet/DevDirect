@@ -10,6 +10,8 @@ import Login from './pages/Login.js';
 import Register from './pages/Register.js';
 import Header from './components/Header.js';
 import Footer from './components/Footer.js';
+import Profile from './pages/Profile.js';
+import Prospect from './pages/Prospect.js';
 
 //importing components
 // import Header from './components/Header.js';
@@ -34,9 +36,11 @@ function App() {
     <Header user={user}/>
     <Routes>
         <Route path="/" element={<Landing user={user} setUser={setUser} />} />
-        <Route path="/dashboard" element={user ? <Dashboard setUser={setUser} user={user} /> : <Navigate to="/login" />} />
         <Route path="/login" element={!user ? <Login setUser={setUser} /> : <Navigate to="/dashboard" />} />
         <Route path="/register" element={!user ? <Register setUser={setUser} /> : <Navigate to="/dashboard" />} />
+        <Route path="/dashboard" element={user ? <Dashboard setUser={setUser} user={user} /> : <Navigate to="/login" />} />
+        <Route path="/profile" element={user ? <Profile setUser={setUser} user={user} /> : <Navigate to="/login" />} />
+        <Route path="/prospect" element={user ? <Prospect setUser={setUser} user={user} /> : <Navigate to="/login" />} />
       </Routes>
     <Footer />
     </>
