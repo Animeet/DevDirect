@@ -10,9 +10,20 @@ function isAuthenticated(req, res, next) {
     next();
 }
 
-//test route
-router.get('/test', (req, res) => {
-    res.send({ message: 'api test route' });
-    });
+//route to get all portfolios
+router.get('/portfolios', isAuthenticated, async (req, res) => {
+  //find all portfolios and populate user
+  const portfolios = await Portfolio.find({}).populate('user');
+  //return json of portfolios
+  res.send(portfolios);
+});
+
+//route to get a single portfolio
+router.get('/portfolios/:id', isAuthenticated, async (req, res) => {
+  //find portfolio by id and populate user
+  const portfolio = await Portfolio.findById(req.params.id).populate('user');
+  //return json of portfolio
+  res.send({ portfolio: portfolio });
+});
 
 module.exports = router;
