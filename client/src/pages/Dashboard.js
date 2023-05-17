@@ -3,7 +3,7 @@ function Dashboard(props) {
     return (
         <div>
             <section className="registerbody dashform">
-                <div className="dashsize flex flex-col m-6">
+                <div className="dashsize flex flex-col m-12">
                     <h1 className="text-center p-10 font-bold text-5xl tracking-wider">Student Dashboard</h1>
 
                     <hr />
@@ -57,19 +57,28 @@ function Dashboard(props) {
                     <hr />
 
                     <div className=" flex flex-row justify-between p-6">
-                        <label for="twitter" className="font-medium text-gray-900 underline">Twitter:</label>
-                        <input type="text" name="twitter" id="twitter"
+                        <label for="github" className="font-medium text-gray-900 underline">Github:</label>
+                        <input type="text" name="github" id="github"
                             className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block p-2 w-3/4"
-                            placeholder="Twitter URL" required="" />
+                            placeholder="Github URL" required="" />
                     </div>
 
                     <hr />
 
                     <div className=" flex flex-row justify-between p-6">
-                        <label for="github" className="font-medium text-gray-900 underline">Github:</label>
-                        <input type="text" name="github" id="github"
+                        <label for="university" className="font-medium text-gray-900 underline">University:</label>
+                        <input type="text" name="university" id="university"
                             className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block p-2 w-3/4"
-                            placeholder="Github URL" required="" />
+                            placeholder="University Name" required="" />
+                    </div>
+
+                    <hr />
+
+                    <div className=" flex flex-row justify-between p-6">
+                        <label for="bootcamp" className="font-medium text-gray-900 underline">Bootcamp:</label>
+                        <input type="text" name="bootcamp" id="bootcamp"
+                            className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block p-2 w-3/4"
+                            placeholder="Bootcamp Name" required="" />
                     </div>
 
                     <hr />
