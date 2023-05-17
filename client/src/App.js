@@ -8,6 +8,7 @@ import Landing from './pages/Landing.js';
 import Dashboard from './pages/Dashboard.js';
 import Login from './pages/Login.js';
 import Register from './pages/Register.js';
+import Header from './components/Header.js';
 
 //importing components
 // import Header from './components/Header.js';
@@ -22,12 +23,14 @@ function App() {
   useEffect(() => {
     axios.get('/auth/authenticated')
       .then(res => {
+        console.log(res.data.user)
         setUser(res.data.user);
       })
   }, []);
 
   return (
     <>
+    <Header user={user}/>
     <Routes>
         <Route path="/" element={<Landing user={user} setUser={setUser} />} />
         <Route path="/dashboard" element={user ? <Dashboard setUser={setUser} user={user} /> : <Navigate to="/login" />} />

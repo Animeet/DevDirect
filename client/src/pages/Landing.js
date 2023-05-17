@@ -5,24 +5,45 @@ import section2 from "../images/section2.png";
 import section3 from "../images/section3.png";
 import technical from "../images/technical.png";
 import behavioral from "../images/behavioral.png";
-import $ from "jquery";
+import {useEffect} from 'react'
+// import $ from "jquery";
 
-function Landing() {
-  $(document).on("click", "a", function (e) {
-    e.preventDefault();
-    var id = $(this).attr("href"),
-      topSpace = 30;
-    $("html, body").animate(
-      {
-        scrollTop: $(id).offset().top - topSpace,
-      },
-      400
-    );
-  });
+function Landing({user}) {
+  function scrollToSection(sectionName) {
+    const id = sectionName.replace('#', '');
+    var topSpace = 30;
+    console.log(id)
+    document.getElementById(id).scrollIntoView();
+    // $("html, body").animate(
+    //   {
+    //     scrollTop: $(sectionName).offset().top - topSpace,
+    //   },
+    //   400
+    // );
+  }
+
+  // $(document).on("click", "a", function (e) {
+  //   e.preventDefault();
+  //   var id = $(this).attr("href")
+  //   scrollToSection(id)
+  // });
+
+  useEffect(() => {
+    const path = window.location.href;
+    const pathArray = path.split('/');
+    const pathName = pathArray[pathArray.length - 1];
+    console.log(pathName)
+
+    if(pathName.includes('#')) {
+      setTimeout(() => {
+        scrollToSection(pathName)
+
+      }, 500)
+    }
+  }, []);
 
   return (
     <main>
-      <Header />
       <div>
         <section className="flex flex-row justify-evenly bg-sky-100" id="about">
           <div className="flex flex-col section1size mr-12">

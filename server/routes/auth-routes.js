@@ -49,7 +49,18 @@ router.get('/logout', (req, res) => {
 router.get('/authenticated', async (req, res) => {
   const user_id = req.session.user_id;
 
-  if (!user_id) return res.send({ user: null });
+  console.log(user_id)
+
+  if (!user_id) {
+    res.send({ user: null });
+  } else {
+    res.send({
+      user: {
+        _id: user_id
+      }
+    });
+
+  }
 });
 
 
