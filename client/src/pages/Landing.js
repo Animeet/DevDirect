@@ -6,7 +6,6 @@ import section3 from "../images/section3.png";
 import technical from "../images/technical.png";
 import behavioral from "../images/behavioral.png";
 import { useEffect } from "react";
-// import $ from "jquery";
 
 function Landing({ user }) {
   function scrollToSection(sectionName) {

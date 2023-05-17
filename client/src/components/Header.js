@@ -19,6 +19,8 @@ function Header({user}) {
         axios.get('/auth/logout')
         .then(res => {
             navigate('/');
+
+            window.location.reload();
         })
     }
 
