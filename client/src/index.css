@@ -6,8 +6,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -20,19 +20,19 @@ body {
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -48,7 +48,7 @@ code {
   padding: 25px;
 }
 
-.mytabs input[type='radio'] {
+.mytabs input[type="radio"] {
   display: none;
 }
 
@@ -78,7 +78,7 @@ code {
   display: none;
 }
 
-.mytabs input[type='radio']:checked + label + .tab {
+.mytabs input[type="radio"]:checked + label + .tab {
   display: block;
 }
 
@@ -144,7 +144,6 @@ code {
   background-color: rgb(130, 130, 130);
 }
 
-
 .practice-section {
   background-color: rgb(130, 130, 130);
   height: 65vh;
@@ -156,7 +155,7 @@ code {
   width: 75%;
 }
 
-.register-form{
+.register-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -165,4 +164,17 @@ code {
 
 .register-form input {
   width: 50%;
+}
+
+.btnstyle {
+  padding: 7px;
+  background-color: rgb(254, 188, 2);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 25px rgb(255, 221, 118);
+}
+
+.btnmove {
+  margin-top: 8.5px;
 }
