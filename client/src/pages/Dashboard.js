@@ -5,7 +5,6 @@ import Footer from "../components/Footer";
 function Dashboard(props) {
     return (
         <div>
-            <Header />
 
             <section className="registerbody dashform">
                 <div className="dashsize flex flex-col m-6">
