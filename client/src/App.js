@@ -9,6 +9,7 @@ import Dashboard from './pages/Dashboard.js';
 import Login from './pages/Login.js';
 import Register from './pages/Register.js';
 import Header from './components/Header.js';
+import Footer from './components/Footer.js';
 
 //importing components
 // import Header from './components/Header.js';
@@ -37,6 +38,7 @@ function App() {
         <Route path="/login" element={!user ? <Login setUser={setUser} /> : <Navigate to="/dashboard" />} />
         <Route path="/register" element={!user ? <Register setUser={setUser} /> : <Navigate to="/dashboard" />} />
       </Routes>
+    <Footer />
     </>
   )
 }

@@ -139,7 +139,7 @@ function Register(props) {
     <>
       <section className="flex justify-center p-8 registerbody">
         <div>
-          <div class=" mb-14 p-6 space-y-4 md:space-y-6 sm:p-8 formsize bg-white tab">
+          <div class=" m-14 p-6 space-y-4 md:space-y-6 sm:p-8 formsize bg-white tab">
             <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
               Create A User Account
             </h1>
@@ -188,7 +188,6 @@ function Register(props) {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   )
 }

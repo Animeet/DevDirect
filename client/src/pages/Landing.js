@@ -5,28 +5,16 @@ import section2 from "../images/section2.png";
 import section3 from "../images/section3.png";
 import technical from "../images/technical.png";
 import behavioral from "../images/behavioral.png";
-import {useEffect} from 'react'
+import { useEffect } from 'react'
 // import $ from "jquery";
 
-function Landing({user}) {
+function Landing({ user }) {
   function scrollToSection(sectionName) {
     const id = sectionName.replace('#', '');
     var topSpace = 30;
     console.log(id)
     document.getElementById(id).scrollIntoView();
-    // $("html, body").animate(
-    //   {
-    //     scrollTop: $(sectionName).offset().top - topSpace,
-    //   },
-    //   400
-    // );
   }
-
-  // $(document).on("click", "a", function (e) {
-  //   e.preventDefault();
-  //   var id = $(this).attr("href")
-  //   scrollToSection(id)
-  // });
 
   useEffect(() => {
     const path = window.location.href;
@@ -34,7 +22,7 @@ function Landing({user}) {
     const pathName = pathArray[pathArray.length - 1];
     console.log(pathName)
 
-    if(pathName.includes('#')) {
+    if (pathName.includes('#')) {
       setTimeout(() => {
         scrollToSection(pathName)
 
@@ -46,27 +34,29 @@ function Landing({user}) {
     <main>
       <div>
         <section className="flex flex-row justify-evenly bg-sky-100" id="about">
-          <div className="flex flex-col section1size mr-12">
+          <div className="flex flex-col section1size mr-12 content-center">
             <h1 className="text-5xl mb-10 font-bold text-center">
               Get Connected, Quicker
             </h1>
-            <p className="mb-10">
+            <p className="mb-10 text-center">
               devDirect is the leading application designed to get students into
-              the industry quicker by connecting them with employers.
+              the industry quicker by connecting them with employers. If anyone knows the hardships of finding a job in the tech industry, it's us. We've been there, and we want to help you get there too.
             </p>
-            <p className="mb-2">
+            <p className="mb-2 text-center">
               {" "}
-              For students, gain passive attention from potential employers!
+              For <span class="font-bold">students</span>, gain passive attention from potential employers!
             </p>
-            <p className="mb-10">
-              For employers, it's never been easier to find quality developing
+            <p className="mb-10 text-center">
+              For <span class="font-bold">employers</span>, it's never been easier to find quality developing
               minds!
             </p>
-            <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white  focus:ring-4 focus:outline-none focus:ring-cyan-200">
-              <span class="relative px-5 text-white py-2.5 transition-all ease-in duration-75 rounded-md group-hover:bg-opacity-0">
-                Sign Up Today
-              </span>
-            </button>
+            <a href="/register" class="flex justify-center content-center">
+              <button class="relative inline-flex items-center justify-center p-0.5 w-4/5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200">
+                <span class="relative px-5 text-white py-2.5 transition-all ease-in duration-75 rounded-md group-hover:bg-opacity-0">
+                  Sign Up Today
+                </span>
+              </button>
+            </a>
           </div>
           <div class="mt-10 mr-10">
             <img src={section1} alt="devDirect" />
@@ -172,31 +162,35 @@ function Landing({user}) {
           <div class="flex flex-row justify-evenly">
             <div class="h-[325px] w-[540px] relative mt-14">
               <img src={technical} alt="" />
-              <button>
-                <div class="absolute bottom-0 px-4 py-3 bg-gray-600/75 w-full">
-                  <h1 class="text-white font-semibold text-3xl">
-                    {" "}
-                    Technical Interview Practice{" "}
-                  </h1>
-                  <p class="text-gray-200">
-                    Practice problems given to us by our partners.
-                  </p>
-                </div>
-              </button>
+              <a href="https://www.codewars.com/">
+                <button>
+                  <div class="absolute bottom-0 px-4 py-3 bg-gray-600/75 w-full">
+                    <h1 class="text-white font-semibold text-3xl">
+                      {" "}
+                      Technical Interview Practice{" "}
+                    </h1>
+                    <p class="text-gray-200">
+                      Practice problems given to us by our partners.
+                    </p>
+                  </div>
+                </button>
+              </a>
             </div>
             <div class="h-[325px] w-[540px] relative mt-14">
               <img src={behavioral} alt="" />
-              <button>
-                <div class="absolute bottom-0 px-4 py-3 bg-gray-600/75 w-full">
-                  <h1 class="text-white font-semibold text-3xl">
-                    {" "}
-                    Behavioral Interview Practice{" "}
-                  </h1>
-                  <p class="text-gray-200">
-                    Learn better ways to answer questions about yourself.
-                  </p>
-                </div>
-              </button>
+              <a href="https://www.pramp.com/dev/uc-behavioral">
+                <button>
+                  <div class="absolute bottom-0 px-4 py-3 bg-gray-600/75 w-full">
+                    <h1 class="text-white font-semibold text-3xl">
+                      {" "}
+                      Behavioral Interview Practice{" "}
+                    </h1>
+                    <p class="text-gray-200">
+                      Learn better ways to answer questions about yourself.
+                    </p>
+                  </div>
+                </button>
+              </a>
             </div>
           </div>
         </section>
@@ -266,7 +260,6 @@ function Landing({user}) {
           </div>
         </section>
       </div>
-      <Footer />
     </main>
   );
 }
