@@ -23,6 +23,10 @@ body {
   animation: gradient 15s ease infinite;
 }
 
+.prospectpage {
+  height: 800px;
+}
+
 @keyframes gradient {
 	0% {
 		background-position: 0% 50%;
@@ -59,6 +63,12 @@ code {
 
 .mytabs input[type='radio'] {
   display: none;
+}
+
+.grid-forms {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  gap: 50px;
 }
 
 .tab-label-1 {
@@ -164,7 +174,7 @@ code {
 
 .practice-section {
   background-color: rgb(130, 130, 130);
-  height: 600px;
+  height: 65vh;
 }
 
 .textbox {
@@ -173,4 +183,10 @@ code {
   width: 75%;
 }
 
+.formdimension {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  margin: 15px auto 0;
+}
 
