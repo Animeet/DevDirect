@@ -5,28 +5,27 @@ import section2 from "../images/section2.png";
 import section3 from "../images/section3.png";
 import technical from "../images/technical.png";
 import behavioral from "../images/behavioral.png";
-import { useEffect } from 'react'
+import { useEffect } from "react";
 // import $ from "jquery";
 
 function Landing({ user }) {
   function scrollToSection(sectionName) {
-    const id = sectionName.replace('#', '');
+    const id = sectionName.replace("#", "");
     var topSpace = 30;
-    console.log(id)
+    console.log(id);
     document.getElementById(id).scrollIntoView();
   }
 
   useEffect(() => {
     const path = window.location.href;
-    const pathArray = path.split('/');
+    const pathArray = path.split("/");
     const pathName = pathArray[pathArray.length - 1];
-    console.log(pathName)
+    console.log(pathName);
 
-    if (pathName.includes('#')) {
+    if (pathName.includes("#")) {
       setTimeout(() => {
-        scrollToSection(pathName)
-
-      }, 500)
+        scrollToSection(pathName);
+      }, 500);
     }
   }, []);
 
@@ -40,15 +39,18 @@ function Landing({ user }) {
             </h1>
             <p className="mb-10 text-center">
               devDirect is the leading application designed to get students into
-              the industry quicker by connecting them with employers. If anyone knows the hardships of finding a job in the tech industry, it's us. We've been there, and we want to help you get there too.
+              the industry quicker by connecting them with employers. If anyone
+              knows the hardships of finding a job in the tech industry, it's
+              us. We've been there, and we want to help you get there too.
             </p>
             <p className="mb-2 text-center">
               {" "}
-              For <span class="font-bold">students</span>, gain passive attention from potential employers!
+              For <span class="font-bold">students</span>, gain passive
+              attention from potential employers!
             </p>
             <p className="mb-10 text-center">
-              For <span class="font-bold">employers</span>, it's never been easier to find quality developing
-              minds!
+              For <span class="font-bold">employers</span>, it's never been
+              easier to find quality developing minds!
             </p>
             <a href="/register" class="flex justify-center content-center">
               <button class="relative inline-flex items-center justify-center p-0.5 w-4/5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200">
@@ -205,7 +207,11 @@ function Landing({ user }) {
               help us improve by offering suggestions? Whatever your question,
               let us know!
             </p>
-            <form action="#" class="space-y-8">
+            <form
+              method="POST"
+              action="https://getform.io/f/d9a774f5-7e56-4e74-a9c4-3434d9883d69"
+              class="space-y-8"
+            >
               <div>
                 <label
                   for="email"
@@ -215,6 +221,7 @@ function Landing({ user }) {
                 </label>
                 <input
                   type="email"
+                  name="email"
                   id="email"
                   class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                   placeholder="Type in your email address"
@@ -230,6 +237,7 @@ function Landing({ user }) {
                 </label>
                 <input
                   type="text"
+                  name="subject"
                   id="subject"
                   class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 "
                   placeholder="Let us know how we can help you"
@@ -245,6 +253,7 @@ function Landing({ user }) {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows="6"
                   class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
                   placeholder="Leave a comment..."
