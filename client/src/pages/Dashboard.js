@@ -208,13 +208,13 @@ function Dashboard(props) {
 
       <div>
         <h4>Portfolio: {formData.portfolioLink}</h4>
-        <h4>{formData.resumeLink}</h4>
-        <h4>{formData.bio}</h4>
-        <h4>{formData.githubLink}</h4>
-        <h4>{formData.linkedInLink}</h4>
-        <h4>{formData.university}</h4>
-        <h4>{formData.bootcamp}</h4>
-        <h4>{formData.languages}</h4>
+        <h4>Resume: {formData.resumeLink}</h4>
+        <h4>Bio: {formData.bio}</h4>
+        <h4>GitHub: {formData.githubLink}</h4>
+        <h4>LinkedIn: {formData.linkedInLink}</h4>
+        <h4>University: {formData.university}</h4>
+        <h4>Bootcamp: {formData.bootcamp}</h4>
+        <h4>Languages: {formData.languages}</h4>
       </div>
     </form>
   );
