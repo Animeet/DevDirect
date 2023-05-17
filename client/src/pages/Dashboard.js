@@ -31,10 +31,13 @@ function Dashboard(props) {
                     <hr />
 
                     <div className=" flex flex-row justify-between p-6">
-                        <label for="bio" className="font-medium text-gray-900 underline">Bio:</label>
-                        <input type="text" name="bio" id="bio"
-                            className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block p-2 w-3/4"
-                            placeholder="Tell a little about yourself" required="" />
+                        <label for="bio" class="font-medium text-gray-900 underline">Bio:</label>
+                        <textarea
+                            id="message"
+                            rows="6"
+                            class="block p-2.5 w-3/4 text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
+                            placeholder="Leave a comment..."
+                        ></textarea>
                     </div>
 
                     <hr />
