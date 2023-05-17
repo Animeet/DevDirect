@@ -46,6 +46,14 @@ function Dashboard() {
             <button onClick={() => handlePortfolioUpdate(portfolio._id)}>
               Update
             </button>
+            <h2>{portfolio.portfolioLink}</h2>
+            <h2>{portfolio.resumeLink}</h2>
+            <h2>{portfolio.githubLink}</h2>
+            <h2>{portfolio.linkedinLink}</h2>
+            <h2>{portfolio.university}</h2>
+            <h2>{portfolio.bootcamp}</h2>
+            <h2>{portfolio.languages[0]}</h2>
+            {/* is targeting index 0 correct? */}
           </div>
         );
       })}

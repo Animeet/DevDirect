@@ -24,7 +24,7 @@ function Profile() {
 
           <hr />
 
-          <h3 class="text-center text-4xl p-8">Rutger's University</h3>
+          <h3 class="text-center text-4xl p-8">{portfolio?.user?.university}</h3>
 
           <div class="flex justify-center">
             <hr class="w-3/4" />
@@ -34,13 +34,13 @@ function Profile() {
             <div class="flex flex-col">
               <p class="text-center text-4xl underline">Portfolio</p>
               <a class="text-center" href="">
-                http://portfolio.com
+              {portfolio?.user?.portfolioLink}
               </a>
             </div>
             <div class="flex flex-col">
               <p class="text-center text-4xl underline">Resume</p>
               <a class="text-center" href="">
-                http://resume.com
+              {portfolio?.user?.resumeLink}
               </a>
             </div>
           </div>
@@ -53,13 +53,13 @@ function Profile() {
             <div class="flex flex-col">
               <p class="text-center text-4xl underline">Github</p>
               <a class="text-center" href="">
-                http://github.com
+              {portfolio?.user?.githubLink}
               </a>
             </div>
             <div class="flex flex-col">
               <p class="text-center text-4xl underline">LinkedIn</p>
               <a class="text-center" href="">
-                http://linkedin.com
+              {portfolio?.user?.linkedinLink}
               </a>
             </div>
           </div>
@@ -71,9 +71,10 @@ function Profile() {
           <div>
             <h3 class="text-center text-4xl p-8">Programming Languages</h3>
             <div class="flex flex-row justify-evenly pb-8">
-              <h5 class="text-xl">Javascript</h5>
-              <h5 class="text-xl">Python</h5>
-              <h5 class="text-xl">Java</h5>
+              <h5 class="text-xl">{portfolio?.user?.languages[0]}</h5>
+              {/* is targeting index 0 correct? */}
+              {/* <h5 class="text-xl">Python</h5>
+              <h5 class="text-xl">Java</h5> */}
             </div>
           </div>
 
@@ -84,9 +85,9 @@ function Profile() {
           <div class="flex justify-center p-8">
             <a
               class="bg-sky-300 px-8 py-3 rounded-lg"
-              href="mailto:name@email.com"
+              href={portfolio?.user?.email}
             >
-              Contact Via Email
+              
             </a>
           </div>
         </div>

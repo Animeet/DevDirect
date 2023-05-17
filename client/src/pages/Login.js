@@ -2,6 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 
 function Login(props) {
+  console.log(props);
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -19,7 +20,7 @@ function Login(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    console.log(formData)
     try {
       const res = await axios.post('/auth/login', formData);
 
