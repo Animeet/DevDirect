@@ -1,9 +1,19 @@
 const { Schema, model } = require('mongoose');
 
 const portfolioSchema = new Schema({
-    resumeLink: {
+    portfolioLink: {
         type: String,
         required: false,
+        trim: true
+    },
+    bio: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    resumeLink: {
+        type: String,
+        required: true,
         trim: true
     },
     githubLink: {
@@ -12,11 +22,6 @@ const portfolioSchema = new Schema({
         trim: true
     },
     linkedInLink: {
-        type: String,
-        required: false,
-        trim: true
-    },
-    portfolioLink: {
         type: String,
         required: false,
         trim: true
@@ -34,12 +39,7 @@ const portfolioSchema = new Schema({
     //array of languages known
     languages: [{
         type: String,
-        required: false,
-        trim: true
-    }],
-    socialMedia: [{
-        type: String,
-        required: false,
+        required: true,
         trim: true
     }],
     user: {
