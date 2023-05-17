@@ -44,6 +44,11 @@ code {
   height: 700px;
 }
 
+.dashform {
+  display: flex;
+  justify-content: center;
+}
+
 .mytabs {
   display: flex;
   flex-wrap: wrap;
@@ -100,6 +105,14 @@ code {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.dashsize {
+  background-color: white;
+  border-radius: 25px;
+  width: 950px;
+  -webkit-box-shadow: 0 0 10px #00000091;
+  box-shadow: 0 0 10px #00000091;
+}
+
 .section1size {
   margin-top: 150px;
   margin-left: 125px;
@@ -151,7 +164,7 @@ code {
 
 .practice-section {
   background-color: rgb(130, 130, 130);
-  height: 65vh;
+  height: 600px;
 }
 
 .textbox {
@@ -159,4 +172,5 @@ code {
   height: auto;
   width: 75%;
 }
+
 

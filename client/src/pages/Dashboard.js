@@ -12,7 +12,6 @@ function Dashboard(props) {
 
                     <hr />
 
-
                     <div className=" flex flex-row justify-between p-6">
                         <label for="portfolio" className="font-medium text-gray-900 underline">Portfolio:</label>
                         <input type="text" name="portfolio" id="portfolio"
@@ -82,7 +81,6 @@ function Dashboard(props) {
                     </div>
                 </div>
             </section>
-            <Footer />
         </div>
     )
 }
