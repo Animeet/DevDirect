@@ -10,18 +10,37 @@ function isAuthenticated(req, res, next) {
   next();
 }
 
+router.get("/portfolios/all", async (req, res) => {
+  //find all portfolios and populate user
+  const portfolios = await Portfolio.find().populate("user");
+  //return json of portfolios
+  res.send(portfolios);
+});
+
 //route to get all portfolios
 router.get("/portfolios", isAuthenticated, async (req, res) => {
   //find all portfolios and populate user
-  const portfolios = await Portfolio.find({}).populate("user");
+  const portfolios = await Portfolio.find({user: req.session.user_id}).populate("user");
   //return json of portfolios
   res.send(portfolios);
 });
 
 //route to get a single portfolio
 router.get("/portfolios/:id", isAuthenticated, async (req, res) => {
+  console.log('hello')
   //find portfolio by id and populate user
   const portfolio = await Portfolio.findById(req.params.id).populate("user");
+  //return json of portfolio
+  res.send({ portfolio: portfolio });
+});
+
+//route to update a portfolio
+router.put("/portfolios/:id", isAuthenticated, async (req, res) => {
+  //find portfolio by id and update
+  const portfolio = await Portfolio.findByIdAndUpdate(
+    req.params.id,
+    req.body
+  );
   //return json of portfolio
   res.send({ portfolio: portfolio });
 });
@@ -30,6 +49,7 @@ router.get("/portfolios/:id", isAuthenticated, async (req, res) => {
 router.post("/portfolios", isAuthenticated, async (req, res) => {
   //create new portfolio
   const portfolio = new Portfolio(req.body);
+  portfolio.user=req.session.user_id;
   //save portfolio
   await portfolio.save();
   //find user

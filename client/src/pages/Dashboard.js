@@ -36,7 +36,9 @@ function Dashboard() {
           setPortfolios={setPortfolios}
         />
       )}
-      <button onClick={() => setShowForm(true)}>Add Portfolio</button>
+      {
+        portfolios.length ? null : <button onClick={() => setShowForm(true)}>Add Portfolio</button>
+      }
       {portfolios.map((portfolio) => {
         return (
           <div key={portfolio._id}>
