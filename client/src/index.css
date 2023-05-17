@@ -40,6 +40,11 @@ code {
   height: 700px;
 }
 
+.dashform {
+  display: flex;
+  justify-content: center;
+}
+
 .mytabs {
   display: flex;
   flex-wrap: wrap;
@@ -94,6 +99,14 @@ code {
   width: 750px;
   height: 400px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.dashsize {
+  background-color: white;
+  border-radius: 25px;
+  width: 950px;
+  -webkit-box-shadow: 0 0 10px #00000091;
+  box-shadow: 0 0 10px #00000091;
 }
 
 .section1size {
@@ -154,15 +167,4 @@ code {
   text-align: center;
   height: auto;
   width: 75%;
-}
-
-.register-form{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.register-form input {
-  width: 50%;
 }
