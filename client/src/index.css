@@ -185,3 +185,15 @@ code {
   margin: 15px auto 0;
 }
 
+.addportfolio {
+  height: 600px
+}
+
+.portfolioform {
+  margin-top: 125px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.boxyshadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
