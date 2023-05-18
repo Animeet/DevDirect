@@ -33,16 +33,6 @@ function Prospect(props) {
     } else setFilteredPortfolios([]);
   };
 
-  const handleProfileClick = (portfolio_id) => {
-    console.log(props)
-    console.log(portfolio_id)
-    if (!props.user) {
-      window.location.assign("/login");
-    } else {
-      window.location.assign(`/profile/${portfolio_id}`);
-    }
-  };
-
   return (
     <div>
       <section class="flex justify-center registerbody prospectpage">
@@ -81,7 +71,6 @@ function Prospect(props) {
                 })
               : portfolios.map((portfolio) => {
                   return (
-
                     <a
                       href={`/profile/${portfolio._id}`}
                       class="formdimension bg-white p-3 rounded-lg"
@@ -97,36 +86,15 @@ function Prospect(props) {
                       <div class="flex flex-row justify-center pt-2">
                         <p class="text-center font-medium">
                           {portfolio.university}
-
-                    <>
-                      {/* <button onClick={handleProfileClick}>Redirect</button> */}
-                      <a
-                        href="#"
-                        onClick={() => handleProfileClick(portfolio._id)}
-                        class="formdimension bg-white p-3 rounded-lg"
-                      >
-                        <p class="pb-2 text-red-500">{portfolio.languages}</p>
-                        <hr />
-                        <p class="text-center text-4xl p-8 text-bold">
-                          {portfolio?.user?.first_name +
-                            " " +
-                            portfolio?.user?.last_name}
                         </p>
-                        <hr />
-                        <div class="flex flex-row justify-center pt-2">
-                          <p class="text-center font-medium">
-                            {portfolio.university}
-                          </p>
-                        </div>
-                      </a>
-                    </>
+                      </div>
+                    </a>
                   );
                 })}
           </div>
         </div>
       </section>
     </div>
-  );
-}
+  )};
 
 export default Prospect;
