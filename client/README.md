@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# devDirect
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![license](https://img.shields.io/badge/License-MIT-ff69b4)](https://shields.io)
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+devDirect is the perfect platform for students to discover and connect with employers who are searching for the perfect candidate. With our easy to use dashboard, students can search for job opportunities, apply online, and access content to help them naviate the job search process. Whether you are looking for internships, full time positions, or remote opportunities, devDirect has you covered.
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Installation](#installation)
+- [License](#license)
+- [Usage](#usage)
+- [ScreenShots](#screenshots)
+- [Video](#video)
+- [Links to Deployment](#linkstodeployment)
+- [Credits](#LinkstoDeployment)
+- [Contribution](#contribution)
+- [Tests](#tests)
+- [Questions](#questions)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+n/a
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## License
 
-### `npm run build`
+MIT
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Visit site at NEED DEPLOYED SITE
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Register / Login
 
-### `npm run eject`
+Use Navigation Bar to view full site
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## ScreenShots
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+NEED SCREENSHOTS ONCE STYLING IS COMPLETE
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Video
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+n/a
 
-## Learn More
+## Links to Deployment
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+NEED DEPLOYED SITE
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Credits
 
-### Code Splitting
+Tutoring
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+JD Tadlock
 
-### Analyzing the Bundle Size
+Paul Cwick
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Justin Subrai
 
-### Making a Progressive Web App
+21-MERN Activities
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+20-REACT Activities
 
-### Advanced Configuration
+18-SQL
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+https://github.com/jdtdesigns/drink_recipe_app
 
-### Deployment
+## Contribution
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+[Zachary Barnes](https://github.com/Animeet)
 
-### `npm run build` fails to minify
+[Megan Mathis](https://github.com/MegMathis)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[James Sciacca](https://github.com/jamessciacca)
+
+[Nick Zentai](https://github.com/njd8927)
+
+## Questions
+
+Any questions, please contact us at:
+
+- devDirect: devDirect318@gmail.com
+
+- Zachary Barnes: zachhsavage@gmail.com
+
+- Megan Mathis: mcdonough.megan25@gmail.com
+
+- James Sciacca: noing2003@gmail.com
+
+- Nick Zentai: nicholasz8687@gmail.com
