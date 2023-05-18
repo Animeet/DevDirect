@@ -2,7 +2,6 @@
 const express = require('express');
 const session = require('express-session');
 const path = require('path');
-const helmet = require('helmet');
 require('dotenv').config();
 
 //creating variables for db and port
@@ -12,15 +11,6 @@ const in_production = process.env.PORT;
 
 //creating express app
 const app = express();
-
-app.use(
-    helmet.contentSecurityPolicy({
-      directives: {
-        defaultSrc: ["'none'"],
-        fontSrc: ["'self'", "https://dev-direct.herokuapp.com"],
-      },
-    })
-  );
 
 //pulling in routes
 const api_routes = require('./routes/api-routes');
