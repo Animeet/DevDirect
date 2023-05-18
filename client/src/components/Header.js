@@ -34,7 +34,7 @@ function Header({ user }) {
               href="/login"
               class="text-gray-800 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
             >
-              {user ? "Dashboard" : "Log in"}
+              {user ? "Profile" : "Log in"}
             </a>
             {user ? (
               <a

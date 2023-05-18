@@ -52,7 +52,7 @@ function Prospect(props) {
               onChange={searchPortfolios}
               class="text-center border-2 border-gray-300 bg-white h-10 p-6 rounded-lg text-lg focus:outline-none"
               type="text"
-              placeholder="Search Prospects"
+              placeholder="Search by language"
             />
           </div>
 
@@ -61,9 +61,9 @@ function Prospect(props) {
               ? filteredPortfolios.map((portfolio) => {
                   return (
                     <div
-                      class="formdimension bg-white p-3 rounded-lg"
+                      class="formdimension bg-white p-3 rounded-lg text-center"
                     >
-                      <p class="pb-2 text-red-500">{portfolio.languages}</p>
+                      <p class="pb-2 text-center text-red-500" id="underline">{portfolio.languages}</p>
                       <hr />
                       <p class="text-center text-4xl p-8 text-bold">
                         {portfolio?.user?.first_name +
@@ -81,6 +81,23 @@ function Prospect(props) {
                 })
               : portfolios.map((portfolio) => {
                   return (
+
+                    <a
+                      href={`/profile/${portfolio._id}`}
+                      class="formdimension bg-white p-3 rounded-lg"
+                    >
+                      <p class="pb-2 text-red-500 text-center" id="underline">{portfolio.languages}</p>
+                      <hr />
+                      <p class="text-center text-4xl p-8 text-bold">
+                        {portfolio?.user?.first_name +
+                          " " +
+                          portfolio?.user?.last_name}
+                      </p>
+                      <hr />
+                      <div class="flex flex-row justify-center pt-2">
+                        <p class="text-center font-medium">
+                          {portfolio.university}
+
                     <>
                       {/* <button onClick={handleProfileClick}>Redirect</button> */}
                       <a

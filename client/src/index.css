@@ -292,6 +292,96 @@ code {
   cursor: pointer;
 }
 
+/* form spacing */
+#portfolioForm {
+  justify-content: space-evenly;
+  align-items: center; 
+}
+
+#resumeForm {
+  justify-content: space-evenly;
+  align-items: center; 
+}
+
+#bioForm {
+  justify-content: space-evenly;
+  align-items: center; 
+}
+
+#languagesForm {
+  justify-content: space-evenly;
+  align-items: center; 
+}
+
+#linkedinForm {
+  justify-content: space-evenly;
+  align-items: center; 
+}
+
+#githubForm {
+  justify-content: space-evenly;
+  align-items: center; 
+}
+
+#universityForm {
+  justify-content: space-evenly;
+  align-items: center; 
+}
+
+#bootcampForm {
+  justify-content: space-evenly;
+  align-items: center; 
+}
+
+#updateFormBtn{
+  margin-top: 10px;
+}
+
+#formView {
+  margin-bottom: 300px;
+  margin-top: 200px;
+}
+
+/* dashboard portfolio view */
+#userName{
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+#underline{
+  text-decoration: underline;
+}
+
+#formView {
+  min-width: 400px;
+}
+
+#formh1 {
+  padding-top: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a :hover {
+  text-decoration: underline;
+}
+
+#linkedIn img {
+  width: 50px;
+  height: 50px;
+}
+
+#github img {
+  width: 50px;
+  height: 50px;
+}
+
+#btn-div {
+  
+}
+
 .snap-section {
   height: 100vh;
   display: flex;
@@ -305,3 +395,4 @@ code {
   overflow-y: scroll;
   height: 100vh;
 }
+
