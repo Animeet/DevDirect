@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cd ./server && npm start",
-    "dev": "concurrently \"cd ./server && npm run dev\" \"cd ./client && npm start\"",
-    "build": "cd ./client && npm run build",
-    "install:client": "cd ./client && npm install",
-    "install:server": "cd ./server && npm install",
+    "start": "node server/server.js",
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm start\"",
+    "build": "cd client && npm run build",
+    "install:client": "cd client && npm install",
+    "install:server": "cd server && npm install",
     "install": "npm run install:client && npm run install:server"
   },
   "keywords": [],
