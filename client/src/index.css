@@ -130,6 +130,8 @@ code {
   width: 535px;
 }
 
+
+
 .section2size {
   margin-top: 110px;
   margin-left: 125px;
@@ -185,6 +187,7 @@ code {
   margin: 15px auto 0;
 }
 
+
 .addportfolio {
   height: 600px
 }
@@ -196,4 +199,70 @@ code {
 
 .boxyshadow {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+/* responsiveness css */
+
+/* section 1 img */
+@media (max-width: 1300px) {
+  #image1 {
+      display: none;
+      transition: all 3s ease-in-out;
+  }
+}
+
+/* about section */
+@media (max-width: 1200px) {
+  #about {
+      text-align: center;
+      padding-right: 10%;
+  }
+}
+
+/* Students Section */
+@media (max-width: 1300px) {
+  #image2 {
+      display: none;
+      transition: all 3s ease-in-out;
+  }
+}
+
+@media (max-width: 1200px) {
+  #students {
+      text-align: center;
+      padding-right: 10%;
+  }
+}
+
+#students span {
+  min-width: fit-content;
+
+}
+
+#spanHolder {
+  min-width: 400px;
+}
+
+/* Employers Section */
+@media (max-width: 1300px) {
+  #image3 {
+      display: none;
+      transition: all 3s ease-in-out;
+  }
+}
+
+@media (max-width: 1200px) {
+  #employers {
+      text-align: center;
+      padding-right: 10%;
+  }
+}
+
+/* Register Page */
+#registerBox {
+  max-width: 400px;
+}
+
+/* login page */
+#loginBox {
+  max-width: 400px;
 }
