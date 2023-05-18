@@ -12,6 +12,7 @@ import Header from './components/Header.js';
 import Footer from './components/Footer.js';
 import Profile from './pages/Profile.js';
 import Prospect from './pages/Prospect.js';
+import About from './pages/About.js';
 
 //importing components
 // import Header from './components/Header.js';
@@ -42,6 +43,7 @@ function App() {
         <Route path="/profile/:id" element={<Profile />} />
         <Route path='/prospect' element={<Prospect />} />
         {/* <Route path="/prospect" element={user ? <Prospect setUser={setUser} user={user} /> : <Navigate to="/login" />} /> */}
+        <Route path='/about' element={<About />} />
       </Routes>
     <Footer />
     </>

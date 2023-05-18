@@ -33,6 +33,7 @@ function Prospect(props) {
     } else setFilteredPortfolios([]);
   };
 
+<<<<<<< HEAD
   const handleProfileClick = (portfolioId) => {
     if (!props.user) {
       // const confirmation = window.confirm(
@@ -51,6 +52,8 @@ function Prospect(props) {
     window.location.assign("/login");
   }
 
+=======
+>>>>>>> 125f9a04a22bc8df4f36f8b4009b1efeee7c7eb6
   return (
     <div>
       <section class="flex justify-center registerbody prospectpage">
@@ -69,7 +72,6 @@ function Prospect(props) {
               ? filteredPortfolios.map((portfolio) => {
                   return (
                     <div
-                      onClick={() => handleProfileClick(portfolio._id)}
                       class="formdimension bg-white p-3 rounded-lg"
                     >
                       <p class="pb-2 text-red-500">{portfolio.languages}</p>
@@ -90,6 +92,7 @@ function Prospect(props) {
                 })
               : portfolios.map((portfolio) => {
                   return (
+<<<<<<< HEAD
                     <>
                       {/* <button onClick={handleProfileClick}>Redirect</button> */}
                       <a
@@ -103,6 +106,23 @@ function Prospect(props) {
                           {portfolio?.user?.first_name +
                             " " +
                             portfolio?.user?.last_name}
+=======
+                    <a
+                      href={`/profile/${portfolio._id}`}
+                      class="formdimension bg-white p-3 rounded-lg"
+                    >
+                      <p class="pb-2 text-red-500">{portfolio.languages}</p>
+                      <hr />
+                      <p class="text-center text-4xl p-8 text-bold">
+                        {portfolio?.user?.first_name +
+                          " " +
+                          portfolio?.user?.last_name}
+                      </p>
+                      <hr />
+                      <div class="flex flex-row justify-center pt-2">
+                        <p class="text-center font-medium">
+                          {portfolio.university}
+>>>>>>> 125f9a04a22bc8df4f36f8b4009b1efeee7c7eb6
                         </p>
                         <hr />
                         <div class="flex flex-row justify-center pt-2">
