@@ -33,8 +33,6 @@ function PortfolioForm(props) {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-
     try {
       let res;
 
