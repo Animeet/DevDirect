@@ -25,7 +25,7 @@ function Prospect(props) {
     const input = e.target.value;
     if (input.length) {
       const filtered = portfolios.filter((portfolio) => {
-        return portfolio?.user?.first_name
+        return portfolio?.languages
           ?.toLowerCase()
           .includes(input.toLowerCase());
       });
@@ -49,7 +49,27 @@ function Prospect(props) {
 
           <div class="grid-forms">
             {filteredPortfolios.length
-              ? filteredPortfolios.map(portfolios)
+              ? filteredPortfolios.map((portfolio) => {
+                  return (
+                    <a href={`/profile/${portfolio._id}`}>
+                      <div class="formdimension bg-white p-3 rounded-lg">
+                        <p class="pb-2 text-red-500">{portfolio.languages}</p>
+                        <hr />
+                        <p class="text-center text-4xl p-8 text-bold">
+                          {portfolio?.user?.first_name +
+                            " " +
+                            portfolio?.user?.last_name}
+                        </p>
+                        <hr />
+                        <div class="flex flex-row justify-center pt-2">
+                          <p class="text-center font-medium">
+                            {portfolio.university}
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  );
+                })
               : portfolios.map((portfolio) => {
                   return (
                     <a href={`/profile/${portfolio._id}`}>
@@ -75,8 +95,6 @@ function Prospect(props) {
         </div>
       </section>
     </div>
-  );
-}
+  )};
 
 export default Prospect;
-

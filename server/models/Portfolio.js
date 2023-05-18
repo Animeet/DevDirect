@@ -37,11 +37,11 @@ const portfolioSchema = new Schema({
         trim: true
     },
     //array of languages known
-    languages: [{
+    languages: {
         type: String,
         required: true,
         trim: true
-    }],
+    },
     user: {
         type: Schema.Types.ObjectId,
         ref: 'user'
