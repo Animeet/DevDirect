@@ -1,4 +1,3 @@
-import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -34,6 +33,20 @@ function Prospect(props) {
     } else setFilteredPortfolios([]);
   };
 
+  const handleProfileClick = (portfolioId) => {
+    if (!props.user) {
+      const confirmation = window.confirm(
+        "Only logged in users are allowed to view profiles. Click OK to go to the login page."
+      );
+      if (confirmation) {
+        window.location.href = "/login";
+      }
+    } else {
+      // Proceed with navigating to the profile
+      window.location.href = `/profile/${portfolioId}`;
+    }
+  };
+
   return (
     <div>
       <section class="flex justify-center registerbody prospectpage">
@@ -51,42 +64,45 @@ function Prospect(props) {
             {filteredPortfolios.length
               ? filteredPortfolios.map((portfolio) => {
                   return (
-                    <a href={`/profile/${portfolio._id}`}>
-                      <div class="formdimension bg-white p-3 rounded-lg">
-                        <p class="pb-2 text-red-500">{portfolio.languages}</p>
-                        <hr />
-                        <p class="text-center text-4xl p-8 text-bold">
-                          {portfolio?.user?.first_name +
-                            " " +
-                            portfolio?.user?.last_name}
+                    <div
+                      onClick={() => handleProfileClick(portfolio._id)}
+                      class="formdimension bg-white p-3 rounded-lg"
+                    >
+                      <p class="pb-2 text-red-500">{portfolio.languages}</p>
+                      <hr />
+                      <p class="text-center text-4xl p-8 text-bold">
+                        {portfolio?.user?.first_name +
+                          " " +
+                          portfolio?.user?.last_name}
+                      </p>
+                      <hr />
+                      <div class="flex flex-row justify-center pt-2">
+                        <p class="text-center font-medium">
+                          {portfolio.university}
                         </p>
-                        <hr />
-                        <div class="flex flex-row justify-center pt-2">
-                          <p class="text-center font-medium">
-                            {portfolio.university}
-                          </p>
-                        </div>
                       </div>
-                    </a>
+                    </div>
                   );
                 })
               : portfolios.map((portfolio) => {
                   return (
-                    <a href={`/profile/${portfolio._id}`}>
-                      <div class="formdimension bg-white p-3 rounded-lg">
-                        <p class="pb-2 text-red-500">{portfolio.languages}</p>
-                        <hr />
-                        <p class="text-center text-4xl p-8 text-bold">
-                          {portfolio?.user?.first_name +
-                            " " +
-                            portfolio?.user?.last_name}
+                    <a
+                      href={`/profile/${portfolio._id}`}
+                      onClick={() => handleProfileClick(portfolio._id)}
+                      class="formdimension bg-white p-3 rounded-lg"
+                    >
+                      <p class="pb-2 text-red-500">{portfolio.languages}</p>
+                      <hr />
+                      <p class="text-center text-4xl p-8 text-bold">
+                        {portfolio?.user?.first_name +
+                          " " +
+                          portfolio?.user?.last_name}
+                      </p>
+                      <hr />
+                      <div class="flex flex-row justify-center pt-2">
+                        <p class="text-center font-medium">
+                          {portfolio.university}
                         </p>
-                        <hr />
-                        <div class="flex flex-row justify-center pt-2">
-                          <p class="text-center font-medium">
-                            {portfolio.university}
-                          </p>
-                        </div>
                       </div>
                     </a>
                   );
