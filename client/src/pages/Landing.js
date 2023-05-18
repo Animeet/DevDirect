@@ -5,7 +5,13 @@ import technical from "../images/technical.png";
 import behavioral from "../images/behavioral.png";
 import { useEffect } from "react";
 
+import react, { useState } from "react";
+
 function Landing({ user }) {
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
   function scrollToSection(sectionName) {
     const id = sectionName.replace("#", "");
     console.log(id);
@@ -90,7 +96,10 @@ function Landing({ user }) {
               <span class="m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg">
                 Resume
               </span>
-              <span class="m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg" id="recommendationsHolder">
+              <span
+                class="m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg"
+                id="recommendationsHolder"
+              >
                 Recommendations
               </span>
               <span class="m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg">
@@ -207,6 +216,11 @@ function Landing({ user }) {
               method="POST"
               action="https://getform.io/f/d9a774f5-7e56-4e74-a9c4-3434d9883d69"
               class="space-y-8"
+              onSubmit={() => {
+                setEmail("");
+                setSubject("");
+                setMessage("");
+              }}
             >
               <div>
                 <label
@@ -219,6 +233,8 @@ function Landing({ user }) {
                   type="email"
                   name="email"
                   id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                   placeholder="Type in your email address"
                   required
@@ -235,6 +251,8 @@ function Landing({ user }) {
                   type="text"
                   name="subject"
                   id="subject"
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
                   class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 "
                   placeholder="Let us know how we can help you"
                   required
@@ -251,6 +269,8 @@ function Landing({ user }) {
                   id="message"
                   name="message"
                   rows="6"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
                   placeholder="Leave a comment..."
                 ></textarea>
