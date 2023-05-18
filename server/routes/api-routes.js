@@ -62,4 +62,20 @@ router.post("/portfolios", isAuthenticated, async (req, res) => {
   res.send({ portfolio: portfolio });
 });
 
+//route to delete a portfolio
+router.delete("/portfolios/:id", isAuthenticated, async (req, res) => {
+  //find portfolio by id and delete
+  const portfolio = await Portfolio.findByIdAndDelete(req.params.id);
+  //find user
+  const user = await User.findById(req.session.user_id);
+  //remove portfolio from user
+  user.portfolios = user.portfolios.filter(
+    (portfolio) => portfolio._id !== req.params.id
+  );
+  //save updated user
+  await user.save();
+  //return json of portfolio
+  res.send({ portfolio: portfolio });
+});
+
 module.exports = router;
