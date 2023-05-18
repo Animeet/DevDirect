@@ -35,17 +35,21 @@ function Prospect(props) {
 
   const handleProfileClick = (portfolioId) => {
     if (!props.user) {
-      const confirmation = window.confirm(
-        "Only logged in users are allowed to view profiles. Click OK to go to the login page."
-      );
-      if (confirmation) {
-        window.location.href = "/login";
-      }
-    } else {
-      // Proceed with navigating to the profile
-      window.location.href = `/profile/${portfolioId}`;
+      // const confirmation = window.confirm(
+      //   "Only logged in users are allowed to view profiles. Click OK to go to the login page."
+      // );
+      //   if (confirmation) {
+      window.location.assign("/login");
+      //   }
+      // } else {
+      //   // Proceed with navigating to the profile
+      //   window.location.assign = `/profile/${portfolioId}`;
     }
   };
+
+  function redirectToLogin() {
+    window.location.assign("/login");
+  }
 
   return (
     <div>
@@ -86,31 +90,35 @@ function Prospect(props) {
                 })
               : portfolios.map((portfolio) => {
                   return (
-                    <a
-                      href={`/profile/${portfolio._id}`}
-                      onClick={() => handleProfileClick(portfolio._id)}
-                      class="formdimension bg-white p-3 rounded-lg"
-                    >
-                      <p class="pb-2 text-red-500">{portfolio.languages}</p>
-                      <hr />
-                      <p class="text-center text-4xl p-8 text-bold">
-                        {portfolio?.user?.first_name +
-                          " " +
-                          portfolio?.user?.last_name}
-                      </p>
-                      <hr />
-                      <div class="flex flex-row justify-center pt-2">
-                        <p class="text-center font-medium">
-                          {portfolio.university}
+                    <>
+                      {/* <button onClick={handleProfileClick}>Redirect</button> */}
+                      <a
+                        href="#"
+                        onClick={handleProfileClick}
+                        class="formdimension bg-white p-3 rounded-lg"
+                      >
+                        <p class="pb-2 text-red-500">{portfolio.languages}</p>
+                        <hr />
+                        <p class="text-center text-4xl p-8 text-bold">
+                          {portfolio?.user?.first_name +
+                            " " +
+                            portfolio?.user?.last_name}
                         </p>
-                      </div>
-                    </a>
+                        <hr />
+                        <div class="flex flex-row justify-center pt-2">
+                          <p class="text-center font-medium">
+                            {portfolio.university}
+                          </p>
+                        </div>
+                      </a>
+                    </>
                   );
                 })}
           </div>
         </div>
       </section>
     </div>
-  )};
+  );
+}
 
 export default Prospect;
