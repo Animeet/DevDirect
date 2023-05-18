@@ -28,11 +28,19 @@ function Profile() {
 
   return (
     <div>
-      <section class="flex justify-center registerbody profilepage">
+      <section class="flex justify-center registerbody">
         <div class="m-10 p-8 bg-white rounded-2xl profiledesign">
           <h1 class="text-8xl text-center p-8 font-medium">{portfolio?.user?.first_name + ' ' + portfolio?.user?.last_name}</h1>
 
           <hr />
+
+          <div className="flex justify-center">
+                  <span class="text-center w-3/4 text-lg p-8">
+                    {portfolio.bio}
+                  </span>
+                </div>
+
+                <hr />
 
           <h3 class="text-center text-4xl p-8">{portfolio.university}</h3>
 

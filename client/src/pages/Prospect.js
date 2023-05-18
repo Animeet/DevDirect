@@ -33,20 +33,6 @@ function Prospect(props) {
     } else setFilteredPortfolios([]);
   };
 
-  const handleProfileClick = (portfolioId) => {
-    if (!props.user) {
-      const confirmation = window.confirm(
-        "Only logged in users are allowed to view profiles. Click OK to go to the login page."
-      );
-      if (confirmation) {
-        window.location.href = "/login";
-      }
-    } else {
-      // Proceed with navigating to the profile
-      window.location.href = `/profile/${portfolioId}`;
-    }
-  };
-
   return (
     <div>
       <section class="flex justify-center registerbody prospectpage">
@@ -65,7 +51,6 @@ function Prospect(props) {
               ? filteredPortfolios.map((portfolio) => {
                   return (
                     <div
-                      onClick={() => handleProfileClick(portfolio._id)}
                       class="formdimension bg-white p-3 rounded-lg"
                     >
                       <p class="pb-2 text-red-500">{portfolio.languages}</p>
@@ -88,7 +73,6 @@ function Prospect(props) {
                   return (
                     <a
                       href={`/profile/${portfolio._id}`}
-                      onClick={() => handleProfileClick(portfolio._id)}
                       class="formdimension bg-white p-3 rounded-lg"
                     >
                       <p class="pb-2 text-red-500">{portfolio.languages}</p>
