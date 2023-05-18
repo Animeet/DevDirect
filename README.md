@@ -29,7 +29,7 @@ MIT
 
 ## Usage
 
-Visit site at NEED DEPLOYED SITE
+Visit site at https://dev-direct.herokuapp.com/
 
 Register / Login
 
@@ -37,7 +37,33 @@ Use Navigation Bar to view full site
 
 ## ScreenShots
 
-NEED SCREENSHOTS ONCE STYLING IS COMPLETE
+Landing Page
+
+![Screenshot.](./client/src/images/landing_page.png)
+
+Login Page
+
+![Screenshot.](./client/src/images/login_page.png)
+
+Register Page
+
+![Screenshot.](./client/src/images/register_page.png)
+
+Create Your Portfolio
+
+![Screentshot.](./client/src/images/create_your_portfolio_button.png)
+
+Add Information to Create Your Portfolio
+
+![Screenshot.](./client/src/images/portfolio_create.png)
+
+Porfolio Page
+
+![Screenshot.](./client/src/images/portfolio_page.png)
+
+Prospect Page
+
+![Screenshot.](./client/src/images/prospect_page.png)
 
 ## Video
 
@@ -45,7 +71,9 @@ n/a
 
 ## Links to Deployment
 
-NEED DEPLOYED SITE
+Visit Site at: https://dev-direct.herokuapp.com/
+
+Visit GitHub Page at: https://github.com/Animeet/DevDirect
 
 ## Credits
 
