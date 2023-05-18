@@ -33,9 +33,13 @@ function Prospect(props) {
     } else setFilteredPortfolios([]);
   };
 
-  const handleProfileClick = () => {
+  const handleProfileClick = (portfolio_id) => {
+    console.log(props)
+    console.log(portfolio_id)
     if (!props.user) {
       window.location.assign("/login");
+    } else {
+      window.location.assign(`/profile/${portfolio_id}`);
     }
   };
 
@@ -81,7 +85,7 @@ function Prospect(props) {
                       {/* <button onClick={handleProfileClick}>Redirect</button> */}
                       <a
                         href="#"
-                        onClick={handleProfileClick}
+                        onClick={() => handleProfileClick(portfolio._id)}
                         class="formdimension bg-white p-3 rounded-lg"
                       >
                         <p class="pb-2 text-red-500">{portfolio.languages}</p>
