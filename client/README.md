@@ -75,10 +75,6 @@ https://github.com/jdtdesigns/drink_recipe_app
 
 [Nick Zentai](https://github.com/njd8927)
 
-## Tests
-
-n/a
-
 ## Questions
 
 Any questions, please contact us at:
