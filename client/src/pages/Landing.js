@@ -1,5 +1,3 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import section1 from "../images/section1.png";
 import section2 from "../images/section2.png";
 import section3 from "../images/section3.png";
@@ -10,7 +8,6 @@ import { useEffect } from "react";
 function Landing({ user }) {
   function scrollToSection(sectionName) {
     const id = sectionName.replace("#", "");
-    var topSpace = 30;
     console.log(id);
     document.getElementById(id).scrollIntoView();
   }
@@ -59,7 +56,7 @@ function Landing({ user }) {
               </button>
             </a>
           </div>
-          <div class="mt-10 mr-10">
+          <div class="mt-10 mr-10" id="image1">
             <img src={section1} alt="devDirect" />
           </div>
         </section>
@@ -74,7 +71,7 @@ function Landing({ user }) {
         </div>
 
         <section class="flex flex-row justify-evenly" id="students">
-          <div class="m-10">
+          <div class="m-10" id="image2">
             <img src={section2} alt="devDirect" />
           </div>
           <div className="flex flex-col section2size mr-12">
@@ -86,14 +83,14 @@ function Landing({ user }) {
               Create a profile and showcase the many ways you stand out from the
               rest!
             </p>
-            <div class="grid grid-cols-2 text-center">
+            <div class="grid grid-cols-2 text-center" id="spanHolder">
               <span class="m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg">
                 Portfolio
               </span>
               <span class="m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg">
                 Resume
               </span>
-              <span class="m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg">
+              <span class="m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg" id="recommendationsHolder">
                 Recommendations
               </span>
               <span class="m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg">
@@ -112,7 +109,7 @@ function Landing({ user }) {
         <hr class="breakline" />
 
         <section class="flex flex-row justify-evenly" id="employers">
-          <div class="m-10">
+          <div class="m-10" id="image3">
             <img src={section3} alt="devDirect" />
           </div>
           <div className="flex flex-col section3size mr-12">
