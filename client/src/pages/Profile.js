@@ -30,7 +30,7 @@ function Profile() {
     <div>
       <section class="flex justify-center registerbody profilepage">
         <div class="m-10 p-8 bg-white rounded-2xl profiledesign">
-          <h1 class="text-8xl p-8 font-medium">{portfolio?.user?.first_name + ' ' + portfolio?.user?.last_name}</h1>
+          <h1 class="text-8xl text-center p-8 font-medium">{portfolio?.user?.first_name + ' ' + portfolio?.user?.last_name}</h1>
 
           <hr />
 
