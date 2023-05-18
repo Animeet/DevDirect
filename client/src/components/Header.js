@@ -28,7 +28,7 @@ function Header({user}) {
         <header>
             <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
                 <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-                    <a href="#" class="flex items-center">
+                    <a href="/" class="flex items-center">
                         <img src={logo} class="mr-3 h-14" alt="devDirect Logo" />
                     </a>
                     <div class="flex items-center lg:order-2">
@@ -59,7 +59,7 @@ function Header({user}) {
                                 <a href="#contact" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Contact</a>
                             </li>
                             <li  onClick={() => {navHandler("prospect")}}>
-                                <a href="#prospect" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Prospect</a>
+                                <a href="/prospect" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0">Prospect</a>
                             </li>
                         </ul>
                     </div>

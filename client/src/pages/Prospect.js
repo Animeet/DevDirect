@@ -38,7 +38,7 @@ function Prospect() {
                     <hr />
                     <div class="flex flex-row justify-center pt-2">
                       <p class="text-center font-medium">
-                      {portfolio?.user?.university}
+                      {portfolio.university}
                       </p>
                     </div>
                   </div>

@@ -52,8 +52,7 @@ function Dashboard() {
             <h2>{portfolio.linkedinLink}</h2>
             <h2>{portfolio.university}</h2>
             <h2>{portfolio.bootcamp}</h2>
-            <h2>{portfolio.languages[0]}</h2>
-            {/* is targeting index 0 correct? */}
+            <h2>{portfolio.languages}</h2>
           </div>
         );
       })}
