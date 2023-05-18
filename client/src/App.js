@@ -40,8 +40,8 @@ function App() {
         <Route path="/login" element={!user ? <Login setUser={setUser} /> : <Navigate to="/dashboard" />} />
         <Route path="/register" element={!user ? <Register setUser={setUser} /> : <Navigate to="/dashboard" />} />
         <Route path="/dashboard" element={user ? <Dashboard setUser={setUser} user={user} /> : <Navigate to="/login" />} />
-        <Route path="/profile/:id" element={<Profile />} />
-        <Route path='/prospect' element={<Prospect />} />
+        <Route path="/profile/:id" element={<Profile setUser={setUser} user={user} />} />
+        <Route path='/prospect' element={<Prospect setUser={setUser} user={user} />} />
         {/* <Route path="/prospect" element={user ? <Prospect setUser={setUser} user={user} /> : <Navigate to="/login" />} /> */}
         <Route path='/about' element={<About />} />
       </Routes>
