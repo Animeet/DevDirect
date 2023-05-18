@@ -33,27 +33,6 @@ function Prospect(props) {
     } else setFilteredPortfolios([]);
   };
 
-<<<<<<< HEAD
-  const handleProfileClick = (portfolioId) => {
-    if (!props.user) {
-      // const confirmation = window.confirm(
-      //   "Only logged in users are allowed to view profiles. Click OK to go to the login page."
-      // );
-      //   if (confirmation) {
-      window.location.assign("/login");
-      //   }
-      // } else {
-      //   // Proceed with navigating to the profile
-      //   window.location.assign = `/profile/${portfolioId}`;
-    }
-  };
-
-  function redirectToLogin() {
-    window.location.assign("/login");
-  }
-
-=======
->>>>>>> 125f9a04a22bc8df4f36f8b4009b1efeee7c7eb6
   return (
     <div>
       <section class="flex justify-center registerbody prospectpage">

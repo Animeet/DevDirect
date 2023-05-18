@@ -4,6 +4,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow: auto;
 }
 
 body {
@@ -289,4 +290,18 @@ code {
 
 #burger-menu :hover {
   cursor: pointer;
+}
+
+.snap-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.aboutcontainer {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
 }
