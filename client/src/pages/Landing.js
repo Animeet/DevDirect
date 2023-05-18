@@ -160,7 +160,7 @@ function Landing({ user }) {
           <p class="text-center text-white">
             Learn how to nail any interview that comes your way, with practice!
           </p>
-          <div class="flex flex-row justify-evenly">
+          <div class="flex flex-row justify-evenly pb-16">
             <div class="h-[325px] w-[540px] relative mt-14">
               <img src={technical} alt="" />
               <a href="https://www.codewars.com/">
