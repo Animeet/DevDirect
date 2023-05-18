@@ -23,9 +23,6 @@ body {
   animation: gradient 15s ease infinite;
 }
 
-.prospectpage {
-  height: 800px;
-}
 
 @keyframes gradient {
 	0% {
@@ -90,6 +87,11 @@ code {
   border-bottom: none;
   border-left: 1px solid rgba(146, 146, 146, 0.247);
   border-top-right-radius: 20px;
+}
+
+.practice-section {
+  background-color: rgb(130, 130, 130);
+  height: 65vh;
 }
 
 .mytabs .tab {
@@ -169,12 +171,6 @@ code {
   fill: white;
   border: none;
   background-color: rgb(130, 130, 130);
-}
-
-
-.practice-section {
-  background-color: rgb(130, 130, 130);
-  height: 65vh;
 }
 
 .textbox {

@@ -5,7 +5,17 @@ import axios from "axios";
 
 function Profile() {
     const { id } = useParams();
-    const [portfolio, setPortfolio] = useState(null);
+    const [portfolio, setPortfolio] = useState({
+      user: {
+        first_name: '',
+        last_name: '',
+        university: '',
+        resumeLink: '',
+        githubLink: '',
+        linkedinLink: '',
+      },
+      portfolioLink: '',
+    });
 
     // function to check if user is logged in
     useEffect(() => {
@@ -14,7 +24,7 @@ function Profile() {
           console.log(res.data.portfolio)
           setPortfolio(res.data.portfolio);
         })
-    }, []);
+    }, [id]);
 
   return (
     <div>
@@ -24,23 +34,23 @@ function Profile() {
 
           <hr />
 
-          <h3 class="text-center text-4xl p-8">{portfolio?.user?.university}</h3>
+          <h3 class="text-center text-4xl p-8">{portfolio.university}</h3>
 
           <div class="flex justify-center">
             <hr class="w-3/4" />
           </div>
 
           <div class="flex flex-row justify-evenly p-8">
-            <div class="flex flex-col">
+            <div class="flex flex-col w-1/2">
               <p class="text-center text-4xl underline">Portfolio</p>
               <a class="text-center" href="">
-              {portfolio?.user?.portfolioLink}
+              {portfolio.portfolioLink}
               </a>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col w-1/2">
               <p class="text-center text-4xl underline">Resume</p>
               <a class="text-center" href="">
-              {portfolio?.user?.resumeLink}
+              {portfolio.resumeLink}
               </a>
             </div>
           </div>
@@ -50,16 +60,16 @@ function Profile() {
           </div>
 
           <div class="flex flex-row justify-evenly p-8">
-            <div class="flex flex-col">
+            <div class="flex flex-col w-1/2">
               <p class="text-center text-4xl underline">Github</p>
               <a class="text-center" href="">
-              {portfolio?.user?.githubLink}
+              {portfolio.githubLink}
               </a>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col w-1/2">
               <p class="text-center text-4xl underline">LinkedIn</p>
               <a class="text-center" href="">
-              {portfolio?.user?.linkedinLink}
+              {portfolio.linkedInLink}
               </a>
             </div>
           </div>
@@ -71,10 +81,7 @@ function Profile() {
           <div>
             <h3 class="text-center text-4xl p-8">Programming Languages</h3>
             <div class="flex flex-row justify-evenly pb-8">
-              <h5 class="text-xl">{portfolio?.user?.languages[0]}</h5>
-              {/* is targeting index 0 correct? */}
-              {/* <h5 class="text-xl">Python</h5>
-              <h5 class="text-xl">Java</h5> */}
+              <h5 class="text-xl">{portfolio.languages}</h5>
             </div>
           </div>
 
@@ -85,9 +92,9 @@ function Profile() {
           <div class="flex justify-center p-8">
             <a
               class="bg-sky-300 px-8 py-3 rounded-lg"
-              href={portfolio?.user?.email}
+              href={`mailto:${portfolio.user.email}`}
             >
-              
+              Contact Via Email
             </a>
           </div>
         </div>

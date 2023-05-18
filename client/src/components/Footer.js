@@ -2,16 +2,24 @@ import logo from '../images/logo.png';
 
 
 function Footer() {
+
+    // function navHandler (sectionName) {
+    //     console.log(sectionName)
+    //     window.location.href = `/#${sectionName}`
+    //     return (
+    //         <Navigate replace to={`/#${sectionName}`} />
+    //     )
+    // }
     return (
         <footer className="bg-gray-100">
             <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
                 <div className="sm:flex sm:items-center sm:justify-between">
-                    <a href="https://flowbite.com/" className="flex items-center mb-4 sm:mb-0">
+                    <a href="/" className="flex items-center mb-4 sm:mb-0">
                         <img src={logo} className="mr-3 h-14" alt="devDirect Logo" />
                     </a>
                     <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0">
                         <li>
-                            <a href="#about" className="mr-4 hover:underline md:mr-6 ">About</a>
+                            <a href="/" className="mr-4 hover:underline md:mr-6 ">About</a>
                         </li>
                         <li>
                             <a href="#" className="mr-4 hover:underline md:mr-6">Privacy Policy</a>
@@ -20,7 +28,7 @@ function Footer() {
                             <a href="#" className="mr-4 hover:underline md:mr-6 ">Licensing</a>
                         </li>
                         <li>
-                            <a href="#contact" className="hover:underline">Contact</a>
+                            <a href="mailto:devdirect318@gmail.com" className="hover:underline">Contact</a>
                         </li>
                     </ul>
                 </div>
