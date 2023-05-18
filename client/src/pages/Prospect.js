@@ -33,6 +33,12 @@ function Prospect(props) {
     } else setFilteredPortfolios([]);
   };
 
+  const handleProfileClick = () => {
+    if (!props.user) {
+      window.location.assign("/login");
+    }
+  };
+
   return (
     <div>
       <section class="flex justify-center registerbody prospectpage">
