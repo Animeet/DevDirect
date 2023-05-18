@@ -54,13 +54,14 @@ function PortfolioForm(props) {
   };
 
   return (
-    <div className="w-1/2 bg-white m-14 rounded-xl boxyshadow">
+    <div className="w-1/2 bg-white m-14 rounded-xl boxyshadow" id="formView">
+      <h1 className="text-center font-bold" id="formh1">Update Your Portfolio</h1>
       <form onSubmit={handleSubmit}>
         {errorMessage && <p className="error">{errorMessage}</p>}
-        <div className=" flex flex-row justify-between p-6">
+        <div className=" flex flex-row justify-between p-6" id="portfolioForm">
           <label
             for="portfolioLink"
-            className="font-medium text-gray-900 underline"
+            className="font-medium text-gray-900 "
           >
             Portfolio:
           </label>
@@ -78,10 +79,10 @@ function PortfolioForm(props) {
 
         <hr />
 
-        <div className=" flex flex-row justify-between p-6">
+        <div className=" flex flex-row justify-between p-6" id="resumeForm">
           <label
             for="resumeLink"
-            className="font-medium text-gray-900 underline"
+            className="font-medium text-gray-900 "
           >
             Resume:
           </label>
@@ -99,8 +100,8 @@ function PortfolioForm(props) {
 
         <hr />
 
-        <div className=" flex flex-row justify-between p-6">
-          <label for="bio" class="font-medium text-gray-900 underline">
+        <div className=" flex flex-row justify-between p-6" id="bioForm">
+          <label for="bio" class="font-medium text-gray-900 ">
             Bio:
           </label>
           <textarea
@@ -116,19 +117,19 @@ function PortfolioForm(props) {
 
         <hr />
 
-        <div className=" flex flex-row justify-between p-6">
+        <div className=" flex flex-row justify-between p-6" id="languagesForm">
           <label
             for="languages"
-            className="font-medium text-gray-900 underline"
+            className="font-medium text-gray-900 "
           >
-            Languages:
+            Languages:  
           </label>
           <input
             type="text"
             name="languages"
             id="languages"
             className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block p-2 w-3/4"
-            placeholder="Languages Learned"
+            placeholder="Enter Programming Languages as a comma separated list"
             value={formData.languages}
             onChange={handleInputChange}
             required=""
@@ -137,10 +138,10 @@ function PortfolioForm(props) {
 
         <hr />
 
-        <div className=" flex flex-row justify-between p-6">
+        <div className=" flex flex-row justify-between p-6" id="linkedinForm">
           <label
             for="linkedInLink"
-            className="font-medium text-gray-900 underline"
+            className="font-medium text-gray-900 "
           >
             LinkedIn:
           </label>
@@ -158,10 +159,10 @@ function PortfolioForm(props) {
 
         <hr />
 
-        <div className=" flex flex-row justify-between p-6">
+        <div className=" flex flex-row justify-between p-6" id="githubForm">
           <label
             for="githubLink"
-            className="font-medium text-gray-900 underline"
+            className="font-medium text-gray-900 "
           >
             Github:
           </label>
@@ -179,10 +180,10 @@ function PortfolioForm(props) {
 
         <hr />
 
-        <div className=" flex flex-row justify-between p-6">
+        <div className=" flex flex-row justify-between p-6" id="universityForm">
           <label
             for="university"
-            className="font-medium text-gray-900 underline"
+            className="font-medium text-gray-900 "
           >
             University:
           </label>
@@ -200,8 +201,8 @@ function PortfolioForm(props) {
 
         <hr />
 
-        <div className=" flex flex-row justify-between p-6">
-          <label for="bootcamp" className="font-medium text-gray-900 underline">
+        <div className=" flex flex-row justify-between p-6" id="bootcampForm">
+          <label for="bootcamp" className="font-medium text-gray-900 ">
             Bootcamp:
           </label>
           <input
@@ -217,7 +218,7 @@ function PortfolioForm(props) {
         </div>
 
         <hr />
-        <div className="flex justify-center">
+        <div className="flex justify-center" id="updateFormBtn">
           <button
             type="submit"
             className="w-1/4 m-4 text-white bg-sky-400 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"

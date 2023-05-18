@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import PortfolioForm from "../components/PortfolioForm";
 import axios from "axios";
+import linkedinlogo from "../images/linkedinlogo.png";
+import githublogo from "../images/githublogo.png";
 
 function Dashboard() {
   const [showForm, setShowForm] = useState(false);
@@ -26,6 +28,7 @@ function Dashboard() {
       data: portfolio,
     });
     setShowForm(true);
+    // setPortfolioCreated();
   };
 
   const handlePortfolioDelete = (id) => {
@@ -72,28 +75,30 @@ function Dashboard() {
           </div>
         </div>
       )}
-      {portfolios.map((portfolio) => {
+      {!showForm && (portfolios.map((portfolio) => {
         return (
           <div key={portfolio._id}>
             <section class="flex justify-center registerbody rounded-xl m-12">
-              <div class="m-10 p-8 bg-white rounded-2xl profiledesign boxyshadow">
-                <h1 class="text-8xl text-center p-8 font-medium">
+              <div class="m-10 p-8 bg-white rounded-2xl profiledesign boxyshadow" id="updateView">
+                <h2 class="text-8xl text-center p-8 font-medium" id="userName">
                   {portfolio?.user?.first_name +
                     " " +
                     portfolio?.user?.last_name}
-                </h1>
+                </h2>
 
                 <hr />
 
-                <div className="flex justify-center">
+                <div className="flex justify-center" id="universityName">
                   <span class="text-center w-3/4 text-lg p-8">
+                    <h3 id="underline" class='mb-4'>About</h3>
                     {portfolio.bio}
                   </span>
                 </div>
 
                 <hr />
 
-                <h3 class="text-center text-4xl p-8">{portfolio.university}</h3>
+                <h3 class="text-center text-4xl p-8">
+                  {portfolio.university}</h3>
 
                 <div class="flex justify-center">
                   <hr class="w-3/4" />
@@ -101,34 +106,30 @@ function Dashboard() {
 
                 <div class="flex flex-row justify-evenly p-8">
                   <div class="flex flex-col w-1/2">
-                    <p class="text-center text-4xl underline">Portfolio</p>
-                    <a class="text-center" href="">
-                      {portfolio.portfolioLink}
+                    <a class="text-center mt-6 mr-2" href={portfolio.portfolioLink}>
+                      <h1>Live Portfolio</h1>
                     </a>
                   </div>
                   <div class="flex flex-col w-1/2">
-                    <p class="text-center text-4xl underline">Resume</p>
-                    <a class="text-center" href="">
-                      {portfolio.resumeLink}
+                    <a class="text-center mt-6 mr-2" href={portfolio.resumeLink}>
+                      <h1>Resume</h1>
                     </a>
                   </div>
                 </div>
 
-                <div class="flex justify-center">
+                {/* <div class="flex justify-center">
                   <hr class="w-3/4" />
-                </div>
+                </div> */}
 
-                <div class="flex flex-row justify-evenly p-8">
-                  <div class="flex flex-col w-1/2">
-                    <p class="text-center text-4xl underline">Github</p>
-                    <a class="text-center" href="">
-                      {portfolio.githubLink}
+                <div class="flex flex-row items-center justify-center p-10" id="github">
+                  <div class="w-1/2">
+                    <a href={portfolio.githubLink} target="_blank">
+                      <img src={githublogo} alt="githublogo" class="mx-auto" />
                     </a>
                   </div>
-                  <div class="flex flex-col w-1/2">
-                    <p class="text-center text-4xl underline">LinkedIn</p>
-                    <a class="text-center" href="">
-                      {portfolio.linkedInLink}
+                  <div class="w-1/2">
+                    <a href={portfolio.linkedInLink} target="_blank">
+                      <img src={linkedinlogo} alt="linkedInlogo" class="mx-auto" />
                     </a>
                   </div>
                 </div>
@@ -138,9 +139,9 @@ function Dashboard() {
                 </div>
 
                 <div>
-                  <h3 class="text-center text-4xl p-8">
+                  <h4 class="text-center text-4xl p-8">
                     Programming Languages
-                  </h3>
+                  </h4>
                   <div class="flex flex-row justify-evenly pb-8">
                     <h5 class="text-xl">{portfolio.languages}</h5>
                   </div>
@@ -171,7 +172,8 @@ function Dashboard() {
             {/* <h2>{portfolio.bio}</h2> */}
           </div>
         );
-      })}
+      }))}
+
     </div>
   );
 }
