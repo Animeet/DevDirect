@@ -99,13 +99,13 @@ function Landing({ user }) {
                 class="m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg"
                 id="recommendationsHolder"
               >
-                Recommendations
+                Social Tags
               </span>
               <span class="m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg">
-                Course Grades
+                Education
               </span>
               <span class="m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg">
-                Skills
+                About Me
               </span>
               <span class="m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg">
                 Languages
@@ -131,7 +131,7 @@ function Landing({ user }) {
             </p>
             <div class="grid grid-cols-2 text-center">
               <span class="m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg">
-                Recently Graduated
+                University / Bootcamp
               </span>
               <span class="m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg">
                 Grade Point Average
@@ -140,7 +140,7 @@ function Landing({ user }) {
                 Specific Languages
               </span>
               <span class="m-3 p-2 bg-sky-100 rounded-xl font-medium shadow-lg">
-                So Much More
+                First/Last Name
               </span>
             </div>
           </div>
