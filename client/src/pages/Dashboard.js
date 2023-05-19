@@ -78,8 +78,8 @@ function Dashboard() {
       {!showForm && (portfolios.map((portfolio) => {
         return (
           <div key={portfolio._id}>
-            <section class="flex justify-center registerbody rounded-xl m-12">
-              <div class="m-10 p-8 bg-white rounded-2xl profiledesign boxyshadow" id="updateView">
+            <section  id='dashboardView' class="flex justify-center registerbody rounded-xl m-12">
+              <div class="m-10 p-8 bg-white rounded-2xl profiledesign boxyshadow">
                 <h2 class="text-8xl text-center p-8 font-medium" id="userName">
                   {portfolio?.user?.first_name +
                     " " +
