@@ -46,7 +46,7 @@ function Prospect(props) {
 
   return (
     <div>
-      <section class="flex justify-center registerbody prospectpage">
+      <section id='prospectSection' class="flex justify-center registerbody prospectpage">
         <div class="flex flex-col m-8">
           <div class="flex justify-center pb-10">
             <input
@@ -57,7 +57,7 @@ function Prospect(props) {
             />
           </div>
 
-          <div class="grid-forms">
+          <div id="prospectBoxes">
             {filteredPortfolios.length
               ? filteredPortfolios.map((portfolio) => {
                   return (
