@@ -37,6 +37,10 @@ body {
 	}
 }
 
+.prospectpage {
+  min-height: 605px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -412,6 +416,16 @@ a :hover {
   #prospectBoxes {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+/* Header Button CSS*/
+#nav-div {
+  display: flex;
+  justify-content: center;
+}
+
+#nav-div a {
+  margin-right: 5px;
 }
 
 #loginBtn {

@@ -47,7 +47,16 @@ function Profile() {
 
           <hr />
 
-          <h3 class="text-center text-4xl p-8">{portfolio.university}</h3>
+          <div class="flex flex-row justify-evenly p-8 mt-4">
+            <div class="flex flex-col w-1/2">
+              <h2 class="text-center text-4xl font-medium mb-4">University</h2>
+              <h3 class="text-center text-lg p-8">{portfolio.university}</h3>
+            </div>
+            <div class="flex flex-col w-1/2">
+              <h2 class="text-center text-4xl font-medium mb-4">Bootcamp</h2>
+              <h3 class="text-center text-lg p-8">{portfolio.bootcamp}</h3>
+            </div>
+          </div>
 
           <div class="flex justify-center">
             <hr class="w-3/4" />
