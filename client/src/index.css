@@ -275,6 +275,7 @@ code {
 .hideMenuNav {
   display: none;
 }
+
 .showMenuNav {
   display: block;
   position: absolute;

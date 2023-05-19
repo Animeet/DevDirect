@@ -75,105 +75,117 @@ function Dashboard() {
           </div>
         </div>
       )}
-      {!showForm && (portfolios.map((portfolio) => {
-        return (
-          <div key={portfolio._id}>
-            <section class="flex justify-center registerbody rounded-xl m-12">
-              <div class="m-10 p-8 bg-white rounded-2xl profiledesign boxyshadow" id="updateView">
-                <h2 class="text-8xl text-center p-8 font-medium" id="userName">
-                  {portfolio?.user?.first_name +
-                    " " +
-                    portfolio?.user?.last_name}
-                </h2>
-
-                <hr />
-
-                <div className="flex justify-center" id="universityName">
-                  <span class="text-center w-3/4 text-lg p-8">
-                    <h3 id="underline" class='mb-4'>About</h3>
-                    {portfolio.bio}
-                  </span>
-                </div>
-
-                <hr />
-
-                <h3 class="text-center text-4xl p-8">
-                  {portfolio.university}</h3>
-
-                <div class="flex justify-center">
-                  <hr class="w-3/4" />
-                </div>
-
-                <div class="flex flex-row justify-evenly p-8">
-                  <div class="flex flex-col w-1/2">
-                    <a class="text-center mt-6 mr-2" href={portfolio.portfolioLink}>
-                      <h1>Live Portfolio</h1>
-                    </a>
-                  </div>
-                  <div class="flex flex-col w-1/2">
-                    <a class="text-center mt-6 mr-2" href={portfolio.resumeLink}>
-                      <h1>Resume</h1>
-                    </a>
-                  </div>
-                </div>
-
-                {/* <div class="flex justify-center">
-                  <hr class="w-3/4" />
-                </div> */}
-
-                <div class="flex flex-row items-center justify-center p-10" id="github">
-                  <div class="w-1/2">
-                    <a href={portfolio.githubLink} target="_blank">
-                      <img src={githublogo} alt="githublogo" class="mx-auto" />
-                    </a>
-                  </div>
-                  <div class="w-1/2">
-                    <a href={portfolio.linkedInLink} target="_blank">
-                      <img src={linkedinlogo} alt="linkedInlogo" class="mx-auto" />
-                    </a>
-                  </div>
-                </div>
-
-                <div class="flex justify-center">
-                  <hr class="w-3/4" />
-                </div>
-
-                <div>
-                  <h4 class="text-center text-4xl p-8">
-                    Programming Languages
-                  </h4>
-                  <div class="flex flex-row justify-evenly pb-8">
-                    <h5 class="text-xl">{portfolio.languages}</h5>
-                  </div>
-                </div>
-
-                <div class="flex justify-center">
-                  <hr class="w-3/4" />
-                </div>
-
-                <div className="flex flex-row justify-center">
-                  <button
-                    className="bg-white text-2xl font-medium px-8 py-3 mx-8 rounded-lg my-10 boxyshadow"
-                    onClick={() => handlePortfolioUpdate(portfolio._id)}
+      {!showForm &&
+        portfolios.map((portfolio) => {
+          return (
+            <div key={portfolio._id}>
+              <section class="flex justify-center registerbody rounded-xl m-12">
+                <div
+                  class="m-10 p-8 bg-white rounded-2xl profiledesign boxyshadow"
+                  id="updateView"
+                >
+                  <h2
+                    class="text-8xl text-center p-8 font-medium"
+                    id="userName"
                   >
-                    Update
-                  </button>
+                    {portfolio?.user?.first_name +
+                      " " +
+                      portfolio?.user?.last_name}
+                  </h2>
 
-                  <button
-                    className="bg-red-500 text-2xl font-medium px-8 py-3 mx-8 rounded-lg my-10 boxyshadow"
-                    onClick={() => handlePortfolioDelete(portfolio._id)}
+                  <hr />
+
+                  <div className="flex justify-center" id="universityName">
+                    <span class="text-center w-3/4 text-lg p-8">
+                      {/* <h3 id="underline" class='mb-4'>About</h3> */}
+                      {portfolio.bio}
+                    </span>
+                  </div>
+
+                  <hr />
+
+                  <h3 class="text-center text-4xl p-8">
+                    {portfolio.university}
+                  </h3>
+
+                  <div class="flex justify-center">
+                    <hr class="w-3/4" />
+                  </div>
+
+                  <div class="flex flex-row justify-evenly p-8 mb-4">
+                    <div class="flex flex-col w-1/2">
+                      <a
+                        class="text-center mt-6 mx-8 text-xl font-medium bg-sky-400 p-2 rounded-lg text-white boxyshadow"
+                        href={portfolio.portfolioLink}
+                      >
+                        <h1>Live Portfolio</h1>
+                      </a>
+                    </div>
+                    <div class="flex flex-col w-1/2">
+                      <a
+                        class="text-center mt-6 mx-8 text-xl font-medium bg-sky-400 p-2 rounded-lg text-white boxyshadow"
+                        href={portfolio.resumeLink}
+                      >
+                        <h1>Resume</h1>
+                      </a>
+                    </div>
+                  </div>
+
+                  <hr />
+
+                  <div
+                    class="flex flex-row items-center justify-center p-10"
+                    id="github"
                   >
-                    DELETE
-                  </button>
+                    <div className="flex justify-between w-1/2">
+                      <a href={portfolio.githubLink} target="_blank">
+                        <img src={githublogo} alt="githublogo" class="" />
+                      </a>
+                      <a href={portfolio.linkedInLink} target="_blank">
+                        <img src={linkedinlogo} alt="linkedInlogo" class="" />
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="flex justify-center">
+                    <hr class="w-3/4" />
+                  </div>
+
+                  <div>
+                    <h4 class="text-center text-4xl p-8">
+                      Programming Languages
+                    </h4>
+                    <div class="flex flex-row justify-evenly pb-8">
+                      <h5 class="text-xl">{portfolio.languages}</h5>
+                    </div>
+                  </div>
+
+                  <div class="flex justify-center">
+                    <hr class="w-3/4" />
+                  </div>
+
+                  <div className="flex flex-row justify-center">
+                    <button
+                      className="bg-white text-2xl font-medium px-8 py-3 mx-8 rounded-lg my-10 boxyshadow"
+                      onClick={() => handlePortfolioUpdate(portfolio._id)}
+                    >
+                      Update
+                    </button>
+
+                    <button
+                      className="bg-red-500 text-2xl font-medium px-8 py-3 mx-8 rounded-lg my-10 boxyshadow"
+                      onClick={() => handlePortfolioDelete(portfolio._id)}
+                    >
+                      DELETE
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </section>
+              </section>
 
-            {/* <h2>{portfolio.bio}</h2> */}
-          </div>
-        );
-      }))}
-
+              {/* <h2>{portfolio.bio}</h2> */}
+            </div>
+          );
+        })}
     </div>
   );
 }
